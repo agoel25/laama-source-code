@@ -1,0 +1,4362 @@
+{
+    "metadata": {
+        "title": "Python YouTube API Tutorial: Getting Started - Creating an API Key and Querying the API",
+        "description": "In this Python Programming Tutorial, we'll be learning how to use the YouTube API. We will learn how to create an API Key and connect to the YouTube API using Python. This will allow us to get public information from YouTube and do some analysis. In later videos, I will show how I use this API to grab useful information that might not be easily found on YouTube's site directly. Let's get started...\n\nThe code for this video can be found at:\nhttps://bit.ly/YouTubeAPI-01\n\nGoogle Developers Console - https://console.developers.google.com/\nGoogle API Python Client - https://github.com/googleapis/google-api-python-client\nYouTube API - https://developers.google.com/youtube/v3\n\nEnvironment Variable Tutorial - https://youtu.be/5iWhQWVXosU\nVirtual Environment Tutorial - https://youtu.be/Kg1Yvry_Ydk\n\n✅ Support My Channel Through Patreon:\nhttps://www.patreon.com/coreyms\n\n✅ Become a Channel Member:\nhttps://www.youtube.com/channel/UCCezIgC97PvUuR4_gbFUs5g/join\n\n✅ One-Time Contribution Through PayPal:\nhttps://goo.gl/649HFY\n\n✅ Cryptocurrency Donations:\nBitcoin Wallet - 3MPH8oY2EAgbLVy7RBMinwcBntggi7qeG3\nEthereum Wallet - 0x151649418616068fB46C3598083817101d3bCD33\nLitecoin Wallet - MPvEBY5fxGkmPQgocfJbxP6EmTo5UUXMot\n\n✅ Corey's Public Amazon Wishlist\nhttp://a.co/inIyro1\n\n✅ Equipment I Use and Books I Recommend:\nhttps://www.amazon.com/shop/coreyschafer\n\n▶️ You Can Find Me On:\nMy Website - http://coreyms.com/\nMy Second Channel - https://www.youtube.com/c/coreymschafer\nFacebook - https://www.facebook.com/CoreyMSchafer\nTwitter - https://twitter.com/CoreyMSchafer\nInstagram - https://www.instagram.com/coreymschafer/\n\n#Python",
+        "channel_title": "Corey Schafer",
+        "publish_date": "2020-05-29T16:17:07Z",
+        "view_count": "219605",
+        "like_count": "5930",
+        "comment_count": "333",
+        "duration": "PT20M49S"
+    },
+    "comments": [
+        {
+            "author": "@coreyms",
+            "text": "Hey everyone. This video will be the first video of several where we explore the YouTube API and see how to do some data analysis on public YouTube data. We will learn some useful things we can do with this API. In the next video, I&#39;ll show how we can use this API to calculate the total duration of a YouTube playlist, which is information that Google doesn&#39;t already have listed for playlists.<br>Also, I&#39;m still working on completing the script I&#39;ll use to grab my YouTube channel members, so the end credits for the videos still only contains Patreon supporters at the moment. But I hope to have this resolved shortly. Hope everyone had a great week!",
+            "likes": 113,
+            "publish_time": "2020-05-29T16:16:21Z",
+            "reply_count": 17
+        },
+        {
+            "author": "@Hxmoudiii",
+            "text": "Tysm for helping im actually sending you this using the youtube api",
+            "likes": 0,
+            "publish_time": "2024-10-05T14:10:48Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@BorisNVM",
+            "text": "This was extremely helpful",
+            "likes": 0,
+            "publish_time": "2024-09-14T21:37:54Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@srh1034",
+            "text": "What I loved the most is that how you worked with documentation which is essential and most challenging part when working with any API.",
+            "likes": 1,
+            "publish_time": "2024-09-03T22:43:10Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@9YearsLater-dm4ye",
+            "text": "I cant find people channel names. Yours is schafer5 yet when i go to your channel and look at the link, its coreyms. but if use that one it doesnt work. schafer5 works though.",
+            "likes": 2,
+            "publish_time": "2024-07-09T12:33:31Z",
+            "reply_count": 1
+        },
+        {
+            "author": "@ChrisLeftBlank",
+            "text": "<a href=\"https://www.youtube.com/watch?v=th5_9woFJmk&amp;t=839\">13:59</a> Recon is the worse part. My obsession with web development stems from how terrible most websites are structured. Then once I get comfortable with any external service they update - like some self replicating polymorphic variable.",
+            "likes": 0,
+            "publish_time": "2024-04-30T04:46:41Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@petar76",
+            "text": "Thank you very much!",
+            "likes": 0,
+            "publish_time": "2024-02-02T19:31:55Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@user-hq8wm8giyujcg",
+            "text": "i want to know all my comments on specific youtube channels",
+            "likes": 0,
+            "publish_time": "2023-11-25T19:34:32Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@rugmaable",
+            "text": "very informative and helpful. Great job and quality content indeed",
+            "likes": 0,
+            "publish_time": "2023-11-10T19:14:49Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@yuningliu9659",
+            "text": "This video is so helpful!! Thank you!",
+            "likes": 0,
+            "publish_time": "2023-10-07T21:08:27Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@JRis44",
+            "text": "Can you delete comments with your API key?",
+            "likes": 0,
+            "publish_time": "2023-07-15T15:38:22Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@infinitevirus4826",
+            "text": "hey corey, where did you get that username information for your channel for the forUsername variable?",
+            "likes": 1,
+            "publish_time": "2023-05-18T20:03:25Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@AbeshGhosh-m6h",
+            "text": "i am getting this error<br> line 191, in _retry_request\r<br>    resp, content = http.request(uri, method, *args, **kwargs)\r<br>                    ^^^^^^^^^^^^\r<br>AttributeError: &#39;bool&#39; object has no attribute &#39;request&#39;",
+            "likes": 0,
+            "publish_time": "2023-04-28T08:23:15Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@MartinAaberge",
+            "text": "I know this is old looking at the sub count it printed for your channel :D I miss your stuff, but really enjoy watching the oldies. I want to use this to pull my stats and make a real-time youtube stats page. Might have to roll through all your Django tuts as well :D",
+            "likes": 0,
+            "publish_time": "2023-04-26T07:30:02Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@oppon142",
+            "text": "Can we use this to get contact details like numbers and email ids of youtube influencers&#39; channels?",
+            "likes": 0,
+            "publish_time": "2023-04-12T04:05:09Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@annarocha9769",
+            "text": "thankkkkyouuuuu sooooo muchhhhhhh!",
+            "likes": 0,
+            "publish_time": "2023-03-31T21:25:40Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@criiptico",
+            "text": "I have a question, so I&#39;ve followed your tutorial step by step and I&#39;m getting an error when I declare and initialize response. The error had a link where it says there&#39;s a 403 error with the message &quot;The request is missing a valid API key.&quot; Is there another function in the api that I an test that can confirm if the problem is the api key or access to channel information?<br>Thank you for the video by the way!",
+            "likes": 0,
+            "publish_time": "2023-03-16T18:04:02Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@arunacoder4949",
+            "text": "great explanation Thanks!",
+            "likes": 0,
+            "publish_time": "2023-03-04T11:11:19Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@joum96",
+            "text": "i really respect how you actually showed how us to read the documentation. As a beginner most api docs were very overwhelming for me.",
+            "likes": 9,
+            "publish_time": "2023-03-01T18:41:28Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@sergiovelayos",
+            "text": "Not able to pull username from youtube channels as Corey says, anyone knows how to do it these days?",
+            "likes": 0,
+            "publish_time": "2023-02-18T17:38:52Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@brendaninglis_333",
+            "text": "This is an awesome tutorial!",
+            "likes": 0,
+            "publish_time": "2023-01-20T02:12:24Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@CB-ym7vg",
+            "text": "Thank you very much for the video and your fantastic style of teaching...",
+            "likes": 0,
+            "publish_time": "2022-12-25T11:59:47Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@adautomator236",
+            "text": "this is so helpful - thank you!!!",
+            "likes": 1,
+            "publish_time": "2022-12-11T04:19:13Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@АлексейСоков-ь8и",
+            "text": "2022",
+            "likes": 0,
+            "publish_time": "2022-12-10T11:33:08Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@gmuzetest2913",
+            "text": "Hi Corey, I&#39;m getting an error:  &quot;Import googleapiclient.discovery could not be resolved.  Im using VScode on a Mac",
+            "likes": 0,
+            "publish_time": "2022-11-26T19:45:49Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@rauhan_sheikh",
+            "text": "hey everyone I have a question if we are only accessing public data then why does corey emphasize on not sharing the key and says that he&#39;ll delete it after?",
+            "likes": 0,
+            "publish_time": "2022-11-14T08:48:33Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@DataScienceGarage",
+            "text": "Perfect tutorial! It&#39;s works for me, thanks! Just a question - how to get user name for each Youtube channel? I tried it for my channel, and it is not worked. Only filter parameter: id worked...",
+            "likes": 0,
+            "publish_time": "2022-10-25T21:30:21Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@jazrg",
+            "text": "Very useful and detailed video. Thanks for posting it.",
+            "likes": 0,
+            "publish_time": "2022-09-29T18:39:24Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@ajaykumar-uu4ll",
+            "text": "Hello i have created app and apikey and tried your code but i am getting error can you please help me<br><br><br>File &quot;C:\\Python\\Python38\\lib\\site-packages\\googleapiclient\\<a href=\"http://discovery.py/\">discovery.py</a>&quot;, line 404, in _retrieve_discovery_doc\r<br>    raise UnknownApiNameOrVersion(&quot;name: %s  version: %s&quot; % (serviceName, version))\r<br>googleapiclient.errors.UnknownApiNameOrVersion: name: ajay4126  version: v3",
+            "likes": 0,
+            "publish_time": "2022-09-07T10:00:35Z",
+            "reply_count": 0
+        },
+        {
+            "author": "",
+            "text": "Hey Corey! I am using what I have learnt in this video to download the transcripts of your playlist about DJANGO. But I am getting an error because this video (and maybe others) has no subtitles available: &quot;Python Django Tutorial: How to Use a Custom Domain Name for Our Application&quot;. Would you tell me what should I do in this case? what code should I write to get the transcripts of the other videos which do have them, and avoid the error? Thanks!!",
+            "likes": 0,
+            "publish_time": "2022-08-24T19:45:56Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@dionisisteambot2295",
+            "text": "Thank you",
+            "likes": 0,
+            "publish_time": "2022-08-21T13:52:00Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@biswajit-k",
+            "text": "you are awesome!",
+            "likes": 0,
+            "publish_time": "2022-04-04T04:19:37Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@jonathanacuna",
+            "text": "Soooo interesting. My brain is on fire",
+            "likes": 0,
+            "publish_time": "2022-03-22T04:12:44Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@fahnub",
+            "text": "This was very helpful.",
+            "likes": 0,
+            "publish_time": "2022-03-18T16:55:00Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@alexw3003",
+            "text": "How would I get just the subscriber count since it&#39;s farther into the dict?",
+            "likes": 0,
+            "publish_time": "2022-02-21T18:22:56Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@glocrowhurst",
+            "text": "Simply incredible.  Thank you for helping me understand how to find good info in the API&#39;s documentation!",
+            "likes": 0,
+            "publish_time": "2022-02-20T23:07:15Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@aondokatorjoseph6365",
+            "text": "Hi Corey I installed The API correctly but the import could not be resolved. Any fixes<br> Thanks in Advance.",
+            "likes": 0,
+            "publish_time": "2022-02-12T21:25:08Z",
+            "reply_count": 1
+        },
+        {
+            "author": "@heroes-of-balkan",
+            "text": "I have a problem...<br>How I can validate my APIs in projects that are not on my computer but on Heroku (for an example)? I can&#39;t let API key be found in a code, and doing os.environ wouldn&#39;t work outside of my PC",
+            "likes": 0,
+            "publish_time": "2022-02-06T19:28:14Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@heroes-of-balkan",
+            "text": "I have one problem...",
+            "likes": 0,
+            "publish_time": "2022-02-06T19:24:06Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@jozemennon",
+            "text": "Your video is rly helpful!",
+            "likes": 0,
+            "publish_time": "2022-01-30T11:34:09Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@travisbickle9745",
+            "text": "A lot of people in the comment section have the following error: &quot;No module named &#39;googleapiclient&#39;&quot;. Can someone explain a solution in common English for someone who is an absolute Beginner? I did install the googleclient package via the Terminal and I did try saving the &quot;Sublime Text File&quot; inside of the Virtual envoirement folder, as suggested by other users, but to no avail. I just don&#39;t get it.",
+            "likes": 0,
+            "publish_time": "2022-01-15T20:50:00Z",
+            "reply_count": 1
+        },
+        {
+            "author": "@travisbickle9745",
+            "text": "Why are my comments always deleted?",
+            "likes": 0,
+            "publish_time": "2022-01-15T20:28:17Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@digigoliath",
+            "text": "Awesome!!! TQVM!!",
+            "likes": 0,
+            "publish_time": "2022-01-12T01:29:14Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@codeengage696",
+            "text": "Can you please help me , as to how we can get the username of any youtube channel . I am facing difficulties while building my application ...",
+            "likes": 0,
+            "publish_time": "2022-01-06T04:15:48Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@samrey8134",
+            "text": "Thank you for the Video, Picked up python course of this.  I follow your example in attempt to query an API with API_ID and Secret, but I got no dice.  Any insight in regards to syntax.<br>I will gladly share my code, but may be a bit long for the Comment section. lol",
+            "likes": 0,
+            "publish_time": "2022-01-05T22:17:25Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@shyamss2338",
+            "text": "What is request variable doing here?",
+            "likes": 0,
+            "publish_time": "2021-12-29T01:24:43Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@secureshell1516",
+            "text": "Thank you!",
+            "likes": 0,
+            "publish_time": "2021-12-14T11:28:28Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@rinsyarifuddin8696",
+            "text": "{<br>  &quot;error&quot;: {<br>    &quot;code&quot;: 403,<br>    &quot;message&quot;: &quot;The request is missing a valid API key.&quot;,<br>    &quot;errors&quot;: [<br>      {<br>        &quot;message&quot;: &quot;The request is missing a valid API key.&quot;,<br>        &quot;domain&quot;: &quot;global&quot;,<br>        &quot;reason&quot;: &quot;forbidden&quot;<br>      }<br>    ],<br>    &quot;status&quot;: &quot;PERMISSION_DENIED&quot;<br>  }<br>}<br>I get this error,, please help me to solve it",
+            "likes": 0,
+            "publish_time": "2021-12-05T00:58:01Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@hshs510",
+            "text": "Those who are getting ModuleNotFoundError: No module named &#39;googleapiclient&#39; error run the code in virtual env in the terminal",
+            "likes": 0,
+            "publish_time": "2021-11-25T11:17:52Z",
+            "reply_count": 1
+        },
+        {
+            "author": "@qinyuehao1619",
+            "text": "Thank you! Amazing Tutorial!",
+            "likes": 0,
+            "publish_time": "2021-11-17T21:46:38Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@youvanced6593",
+            "text": "How could I have ever understood that documentation if you hadn&#39;t explained it. I swear to god, it&#39;s like Chinese to me.",
+            "likes": 1,
+            "publish_time": "2021-09-27T13:56:15Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@vinayaksharma-ys3ip",
+            "text": "Amazing Tutorial Buddy....Thanks a Ton!!",
+            "likes": 0,
+            "publish_time": "2021-09-26T06:38:29Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@manuelovalles4042",
+            "text": "I am receiving this Error:<br><br>ModuleNotFoundError: No module named &#39;googleapiclient&#39;<br><br>anyone have a solution?",
+            "likes": 3,
+            "publish_time": "2021-09-12T16:50:52Z",
+            "reply_count": 2
+        },
+        {
+            "author": "@rahulmishra6478",
+            "text": "amazing",
+            "likes": 0,
+            "publish_time": "2021-09-11T16:27:43Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@eduardocruzism",
+            "text": "Is there a way to get more tem 10k subscribers names per day using YT Data API? I got full access to that channel (6 Million subscribers)",
+            "likes": 0,
+            "publish_time": "2021-09-08T15:05:35Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@martadaddatoinstagramstori7951",
+            "text": "This is the start of a comment thread.",
+            "likes": 0,
+            "publish_time": "2021-09-01T19:54:12Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@kenkaneki9214",
+            "text": "I keep getting ModuleNotFoundError: No module named &#39;googleapiclient&#39; what am I doing wrong? i entered in the install google-api-python-client code but it still won&#39;t run in Pycharm",
+            "likes": 0,
+            "publish_time": "2021-08-28T19:30:21Z",
+            "reply_count": 1
+        },
+        {
+            "author": "@nithinalagesh1777",
+            "text": "dude u are my life saver i    was so confused about yt&#39;s api btw thx",
+            "likes": 0,
+            "publish_time": "2021-08-23T11:35:16Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@ujeshnada7281",
+            "text": "Best Python teacher I have seen so far. <br>I do not know where do you live. But I would definitely like to meet you once in a life.",
+            "likes": 0,
+            "publish_time": "2021-07-31T07:01:12Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@vero_nicaasmr",
+            "text": "im getting a ModuleNotFoundError: No module named &#39;googleapiclient&#39; even though i pip install --upgrade google-api-python-client",
+            "likes": 1,
+            "publish_time": "2021-07-19T22:36:43Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@kirillous",
+            "text": "What is the purpose of .execute() function and do I need any special libraries for that because mine doesn’t seem to work. Thanks 🙏",
+            "likes": 0,
+            "publish_time": "2021-07-10T17:17:07Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@eliasterzis2548",
+            "text": "Thank you so much for your video! So far I was reading and hearing about API&#39;s but I was thinking that is somethig extremely tough. But I loved API&#39;s with this video. Actually this comment is inserted here using insert method of YouTube API (CommentTreads resource)!",
+            "likes": 0,
+            "publish_time": "2021-07-07T12:41:54Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@CHITUS",
+            "text": "I never subscribed to a channel faster in my life. In fact, I rarely subscribe... I only do it if I consider that all the creator&#39;s content would interest me. \r<br>Thank you very much Corey for your time and effort.",
+            "likes": 1,
+            "publish_time": "2021-07-05T02:24:56Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@danexuss",
+            "text": "THX MAN. UR TUTOR IS WHAT I WAS LOOKING FOR!!!!",
+            "likes": 0,
+            "publish_time": "2021-06-20T17:56:09Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@shuvadipghosh374",
+            "text": "sir i am having a problem to to use the google classroom api.<br>Sir the code that I am using is <br>from googleapiclient.discovery import build\r<br>api_key = &#39;i have put the correct API  key here in the code.&#39;\r<br>classroom = build(&#39;classroom&#39;, &#39;v1&#39;, developerKey=api_key )\r<br>request = classroom.courses().announcements().list(\r<br>    courseId = &#39;364264361601&#39;, \r<br>    announcementStates = &#39;PUBLISHED&#39;\r<br>)\r<br>response = request.execute()\r<br>print(response)<br><br>but sir this is throwing a error.The error is <br>Traceback (most recent call last):\r<br>  File &quot;c:\\Users\\user\\Desktop\\Maya_Ai\\<a href=\"http://test.py/\">test.py</a>&quot;, line 8, in &lt;module&gt;\r<br>    response = request.execute()\r<br>  File &quot;C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python36\\lib\\site-packages\\googleapiclient\\_<a href=\"http://helpers.py/\">helpers.py</a>&quot;, line 134, in positional_wrappereapiclient\\_<a href=\"http://helpers.py/\">helpers.py</a>&quot;, line 134, in positional_wrapper\r<br>    return wrapped(*args, **kwargs)                                                 eapiclient\\<a href=\"http://http.py/\">http.py</a>&quot;, line 935, in execute\r<br>  File &quot;C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python36\\lib\\site-packages\\googleapiclient\\<a href=\"http://http.py/\">http.py</a>&quot;, line 935, in execute                                           <a href=\"http://oogleapis.com/v1/courses/364264361601/announcements?announcementStates=PUBLISHED&amp;key=AIzaSyAwPw3BV\">oogleapis.com/v1/courses/364264361601/announcements?announcementStates=PUBLISHED&amp;key=AIzaSyAwPw3BV\r</a><br>    raise HttpError(resp, content, uri=self.uri)                                    tion credential. Expected OAuth 2 access token, login cookie or other valid authentication credent\r<br>googleapiclient.errors.HttpError: &lt;HttpError 401 when requesting https://classroom.gtails: &quot;Request is missing required authentication credential. Expected OAuth 2 access token, <a href=\"http://logioogleapis.com/v1/courses/364264361601/announcements?announcementStates=PUBLISHED&amp;key/identity/sign-in/web/devconsole-project.%22%3E=AIzaSyAwPw3BVidfSuo2d6JSaeDzX4hne5zYLZU&amp;alt=json\">logioogleapis.com/v1/courses/364264361601/announcements?announcementStates=PUBLISHED&amp;key/identity/sign-in/web/devconsole-project.&quot;&gt;=AIzaSyAwPw3BVidfSuo2d6JSaeDzX4hne5zYLZU&amp;alt=json</a> returned &quot;Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other \r<br>valid authentication credential. See <a href=\"https://developers.google.com/identity/sign-in/web/devconsole-project.%22\">https://developers.google.com/identity/sign-in/web/devconsole-project.&quot;</a>. Details: &quot;Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See <a href=\"https://developers.google.com/identity/sign-in/web/devconsole-project.%22%3E\">https://developers.google.com/identity/sign-in/web/devconsole-project.&quot;&gt;</a>",
+            "likes": 0,
+            "publish_time": "2021-06-20T09:14:56Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@smuchapreciated1959",
+            "text": "you are a genious! thank ou . Now it works. I have tried to do this 3-4 times watching different videos. Even think I watched your video earlier but lost patience during the long documentation :P but now! it works :) thank you ! :)",
+            "likes": 0,
+            "publish_time": "2021-06-15T23:11:50Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@revowolf7413",
+            "text": "Is it possible to share a script so that others can use it too on behalf of your API key but without revealing your API key?",
+            "likes": 0,
+            "publish_time": "2021-05-31T08:06:25Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@justridewithvinay9721",
+            "text": "Nice explanation.",
+            "likes": 0,
+            "publish_time": "2021-05-23T01:22:09Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@anand_dudi",
+            "text": "what is execute method i mean is it python method or api method ?",
+            "likes": 0,
+            "publish_time": "2021-05-10T19:23:49Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@spazmeister1791",
+            "text": "I was wondering if you&#39;d be able to python to automatically add videos with certain titles or made by a certain channel to a playlist? I&#39;m still a bit of a noobie so I&#39;m not entirely sure it&#39;s possible :/",
+            "likes": 0,
+            "publish_time": "2021-04-28T19:55:52Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@oludhe7",
+            "text": "Why has this channel been self isolating from my recommendations. This would have saved me months of banging my head against the wall",
+            "likes": 0,
+            "publish_time": "2021-04-11T22:11:32Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@rockwithkunal",
+            "text": "Awsome Video, but I have a question\r<br>bro, can we search most viewed videos in India on youtube from youtube api ??",
+            "likes": 0,
+            "publish_time": "2021-04-11T07:45:31Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@scoopydevy",
+            "text": "thank u im making a discord bot which needs my live subscriber count, I&#39;m having an issue doing that though, when I&#39;m trying to access the subscriber count it says that it needs a number not a string here&#39;s how I&#39;m trying to access it print(response[&quot;statistics&quot;][&quot;subscriberCount&quot;])<br><br>Edit : nvm it works after some trial and error",
+            "likes": 0,
+            "publish_time": "2021-04-10T05:36:53Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@samarth2410",
+            "text": "Why don&#39;t we use request?",
+            "likes": 0,
+            "publish_time": "2021-03-25T15:23:35Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@TheCalvin765",
+            "text": "why isnt the .close() method not working to close the api request ?",
+            "likes": 1,
+            "publish_time": "2021-03-24T11:15:11Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@landynj",
+            "text": "No module named &#39;googleapiclient&#39;",
+            "likes": 1,
+            "publish_time": "2021-03-20T18:25:00Z",
+            "reply_count": 2
+        },
+        {
+            "author": "@fjolublar",
+            "text": "using your tutorials I created a python script to check a youtube music playlist and save deleted (and removed) videos and  also added ones :)",
+            "likes": 0,
+            "publish_time": "2021-03-20T16:05:29Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@1UniverseGames",
+            "text": "Do you know how to code for youtube video playlist barcode for each to use kmeans clustering on it",
+            "likes": 0,
+            "publish_time": "2021-03-16T12:59:44Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@ThePrecisionist26354",
+            "text": "the problem with these kinds of videos is that they are not made for it pros, so they will spend an hour just on creating an API key, and not the meat of it - how to write a complete web page that will run a search query on the data api, and bring back the results into the web page.",
+            "likes": 0,
+            "publish_time": "2021-03-04T00:22:27Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@salarghaffarian4914",
+            "text": "Hi Corey!<br><br>First of all, I want to thank you so much for all the great contents you have made so far. I would say, I have learned 80% of my programming skill from your channel and use it as a great reference for myself all the time.<br><br>This video also was very interesting and thank you for spending time on thinking and planning of creating such a great content. <br><br>Second, I would say you are the best coding instructor not only on YouTube, but also in the entire world by far. So, that would be great if you keep making great instructive and informative videos in the future.<br><br>Many thanks.",
+            "likes": 1,
+            "publish_time": "2021-03-03T20:23:36Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@avcreatorscoding7536",
+            "text": "Awesome video, but I had one question, where exactly do we get channel username? I tried it for my channel and can&#39;t find it in channel link!",
+            "likes": 0,
+            "publish_time": "2021-02-13T09:13:59Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@HaykTarkhanyan",
+            "text": "If i need to learn something python related you&#39;re my goto teacher. Thank you and great playlist.",
+            "likes": 0,
+            "publish_time": "2021-02-12T18:11:47Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@davidrosen2705",
+            "text": "how to find user name of channels anybody knows ? thanks",
+            "likes": 0,
+            "publish_time": "2021-02-08T20:19:29Z",
+            "reply_count": 1
+        },
+        {
+            "author": "@boom8095",
+            "text": "great channel, easy approach, thank you!",
+            "likes": 0,
+            "publish_time": "2021-01-29T22:07:12Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@alimohammadian",
+            "text": "thank you",
+            "likes": 0,
+            "publish_time": "2021-01-27T11:04:58Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@alfredsfutterkiste7534",
+            "text": "Honestly no I&#39;m not sick of looking at the documentation I want to learn everything.",
+            "likes": 0,
+            "publish_time": "2021-01-25T19:17:16Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@osvaldoillescas3329",
+            "text": "can i do this with my google basic account? or do i need a special developer account like in twitter?",
+            "likes": 0,
+            "publish_time": "2021-01-14T18:10:01Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@DanielVerberne",
+            "text": "Very good resource for me, a real beginner, much appreciated!",
+            "likes": 0,
+            "publish_time": "2021-01-09T08:35:16Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@axvex595",
+            "text": "Can I get some help with something, for some reason the response object/variable ignores the conditions it has on it&#39;s hierarchist If Statement and just runs immediately without any correspondence to the conditional arguments?<br>______________________________________________________________________________________________________My script takes a URL input from the user and checks if it&#39;s a playlist or a video URL.<br>if it&#39;s a playlist URL, the function fetches its playlistID and inserts it into the build object from the api, in order to get the content details of that playlist<br>______________________________________________________________________________________________________(here&#39;s a snippet of the code)<br><i>____________________________________________________________________________________________________</i><br>        <a href=\"http://www.youtube.com/results?search_query=%23this\">#this</a> checks if the url is a playlist and not just a regular video\r<br>    if url.find(&#39;list=&#39;):\r<br>            <a href=\"http://www.youtube.com/results?search_query=%23if\">#if</a> so, then it will return the id for the playlist, which will later be used for the API call\r<br>        url_id = url.split(&#39;=&#39;)[-1]\r<br>        crs = build(&#39;youtube&#39;, &#39;v3&#39;, developerKey=api_key)\r<br>        rqs = crs.playlistItems().list(part=&#39;contentDetails&#39;, maxResults=100, playlistId=url_id)\r<br>            <a href=\"http://www.youtube.com/results?search_query=%23the\">#the</a> playlist must be public/unlisted for it to be accessible -&gt; meaning that it has a<br>            <a href=\"http://www.youtube.com/results?search_query=%23public\">#public</a> URL\r<br>        rsp = rqs.execute()\r  <a href=\"http://www.youtube.com/results?search_query=%23this\">#THIS</a> IS BEING EXECUTED WITHOUT THE IF STATEMENT&#39;S CONDITION BEING<br>                                           <a href=\"http://www.youtube.com/results?search_query=%23met\">#MET</a>, HEEEEEEEELP ME PLEASE<br>        rsp_items = rsp[&#39;items&#39;]\r<br>        rsp_url_id = []\r<br>\r<br>        for i in rsp_items:\r<br>            rsp_dtls = i[&#39;contentDetails&#39;]\r<br>            rsp_url_id.append(rsp_dtls[&#39;videoId&#39;])\r<br><br>    elif url.find(&#39;/watch?v=&#39;):\r<br>            #---[[[PLACE HOLDER EVENT]]]---#<br><i>____________________________________________________________________________________________________</i><br>when i ran this function i pasted this URL: <a href=\"https://www.youtube.com/watch?v=TE66McLMMEw\">https://www.youtube.com/watch?v=TE66McLMMEw</a><br>which means the If Statements condition is NOT met, but the request is still being executed.<br>Any ideas on what&#39;s happening and maybe how to fix it?",
+            "likes": 1,
+            "publish_time": "2021-01-06T22:55:59Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@maverick3069",
+            "text": "I&#39;m so glad i found this channel yesterday!!",
+            "likes": 0,
+            "publish_time": "2021-01-06T06:53:52Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@stevey19861",
+            "text": "Hi! I get the Error 403 Quota Exceeded even though my metrics show only 5 requests? Can anyone support me?<br>Thanks!",
+            "likes": 0,
+            "publish_time": "2021-01-02T11:54:31Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@maulanakamal6188",
+            "text": "your explanation is not only how to build, but also learn how to learn ,, I like it",
+            "likes": 0,
+            "publish_time": "2020-12-30T07:37:28Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@lilstinky8742",
+            "text": "nice",
+            "likes": 0,
+            "publish_time": "2020-12-27T17:00:46Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@ahmadelsayed009",
+            "text": "Great stuff !",
+            "likes": 0,
+            "publish_time": "2020-12-26T20:44:19Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@nilanjenator",
+            "text": "The minute I used it I get a 403 with exceeded quota",
+            "likes": 0,
+            "publish_time": "2020-12-23T00:51:06Z",
+            "reply_count": 1
+        },
+        {
+            "author": "@nikhilshingadiya7798",
+            "text": "Thanks Corey ,this is my first api call and it&#39;s working",
+            "likes": 0,
+            "publish_time": "2020-12-22T04:28:15Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@blackkissi",
+            "text": "Thanks. @Corey Schafer <br>You could also create a youtube playlist of this YT API series on your channel. That would make it easy to follow along in order, as with your other created playlists on your channel.",
+            "likes": 0,
+            "publish_time": "2020-12-20T07:42:24Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@kthegreat69420",
+            "text": "so i can know when you update a new video in python?",
+            "likes": 1,
+            "publish_time": "2020-12-07T06:22:42Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@mritunjay3723",
+            "text": "Who the hell is 12 dislikers ?",
+            "likes": 0,
+            "publish_time": "2020-12-05T11:02:07Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@MaxMeinz",
+            "text": "I dont get as much information as you when running the function request.execute()",
+            "likes": 0,
+            "publish_time": "2020-12-03T08:01:00Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@michaeldausmann6066",
+            "text": "actually a super fantastic video, the google api docs are a bit of a maze, particularly around authentication...which i didn&#39;t even really need.  thanks.",
+            "likes": 0,
+            "publish_time": "2020-11-29T03:42:39Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@lukegroene6629",
+            "text": "Alright, absolute beginner here. <br><br>ModuleNotFoundError: No module named &#39;googleapiclient&#39;<br><br>Any help would be greatly appreciated!",
+            "likes": 0,
+            "publish_time": "2020-11-15T17:06:03Z",
+            "reply_count": 3
+        },
+        {
+            "author": "@Truevideoz",
+            "text": "What to do if i dont see &quot;Other &quot; as the type of application. Maybe not activated for my  account or should i change something??",
+            "likes": 0,
+            "publish_time": "2020-11-11T07:53:31Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@UKImperium",
+            "text": "Excellent video! I&#39;ve been messing around with YouTube trying to extract data myself. I Googled around when everyone was just recommending YouTube API. I couldn&#39;t find a decent understanding way of setting up this API - your video really helped with this. Thanks again!",
+            "likes": 0,
+            "publish_time": "2020-10-24T12:00:11Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@karthikmishra3188",
+            "text": "Youtube : How better Python tutor u want?<br>Corey : Yesssssss",
+            "likes": 0,
+            "publish_time": "2020-10-23T05:39:45Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@tim_mty",
+            "text": "Dose not work for me",
+            "likes": 0,
+            "publish_time": "2020-10-23T00:35:58Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@serkan_bayram",
+            "text": "this is so great and explanatory video, keep going man",
+            "likes": 0,
+            "publish_time": "2020-10-08T15:47:57Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@ChengPhansivang",
+            "text": "His explain so beautifully and clearly, even his pronunciation is so clear I&#39;m  feeling so good for keep listen to him and  enjoyable his tutorial.",
+            "likes": 0,
+            "publish_time": "2020-10-04T15:53:27Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@prasojojiwandono6189",
+            "text": "thanks a lot man.",
+            "likes": 0,
+            "publish_time": "2020-09-30T17:27:59Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@practicalpythonsolutions-b4478",
+            "text": "Great video, Cory. Thanks. BTW.. why do I need to build the api request and not simply use the requests library and call it that way?",
+            "likes": 0,
+            "publish_time": "2020-09-26T01:22:12Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@AnalyticsWithVipul",
+            "text": "I am getting this error.  <br><br><br>C:\\Users\\vipul\\Python Files&gt;python <a href=\"http://youtube.py/\">youtube.py\r</a><br>Traceback (most recent call last):\r<br>  File &quot;<a href=\"http://youtube.py/\">youtube.py</a>&quot;, line 5, in &lt;module&gt;\r<br>    youtube = build(&#39;youtube&#39;, &#39;v3&#39;, developerKey = api_key)\r<br>  File &quot;C:\\Users\\vipul\\AppData\\Local\\Programs\\Python\\Python38-32\\lib\\site-packages\\googleapiclient\\_<a href=\"http://helpers.py/\">helpers.py</a>&quot;, line 134, in positional_wrapper\r<br>    return wrapped(*args, **kwargs)\r<br>  File &quot;C:\\Users\\vipul\\AppData\\Local\\Programs\\Python\\Python38-32\\lib\\site-packages\\googleapiclient\\<a href=\"http://discovery.py/\">discovery.py</a>&quot;, line 268, in build\r<br>    content = _retrieve_discovery_doc(\r<br>  File &quot;C:\\Users\\vipul\\AppData\\Local\\Programs\\Python\\Python38-32\\lib\\site-packages\\googleapiclient\\<a href=\"http://discovery.py/\">discovery.py</a>&quot;, line 359, in _retrieve_discovery_doc\r<br>    resp, content = req.execute(num_retries=num_retries)\r<br>  File &quot;C:\\Users\\vipul\\AppData\\Local\\Programs\\Python\\Python38-32\\lib\\site-packages\\googleapiclient\\_<a href=\"http://helpers.py/\">helpers.py</a>&quot;, line 134, in positional_wrapper\r<br>    return wrapped(*args, **kwargs)\r<br>  File &quot;C:\\Users\\vipul\\AppData\\Local\\Programs\\Python\\Python38-32\\lib\\site-packages\\googleapiclient\\<a href=\"http://http.py/\">http.py</a>&quot;, line 892, in execute\r<br>    resp, content = _retry_request(\r<br>  File &quot;C:\\Users\\vipul\\AppData\\Local\\Programs\\Python\\Python38-32\\lib\\site-packages\\googleapiclient\\<a href=\"http://http.py/\">http.py</a>&quot;, line 204, in _retry_request\r<br>    raise exception\r<br>  File &quot;C:\\Users\\vipul\\AppData\\Local\\Programs\\Python\\Python38-32\\lib\\site-packages\\googleapiclient\\<a href=\"http://http.py/\">http.py</a>&quot;, line 177, in _retry_request\r<br>    resp, content = http.request(uri, method, *args, **kwargs)\r<br>  File &quot;C:\\Users\\vipul\\AppData\\Local\\Programs\\Python\\Python38-32\\lib\\site-packages\\httplib2\\__init__.py&quot;, line 1985, in request\r<br>    (response, content) = self._request(\r<br>  File &quot;C:\\Users\\vipul\\AppData\\Local\\Programs\\Python\\Python38-32\\lib\\site-packages\\httplib2\\__init__.py&quot;, line 1650, in _request\r<br>    (response, content) = self._conn_request(\r<br>  File &quot;C:\\Users\\vipul\\AppData\\Local\\Programs\\Python\\Python38-32\\lib\\site-packages\\httplib2\\__init__.py&quot;, line 1557, in _conn_request\r<br>    conn.connect()\r<br>  File &quot;C:\\Users\\vipul\\AppData\\Local\\Programs\\Python\\Python38-32\\lib\\site-packages\\httplib2\\__init__.py&quot;, line 1324, in connect\r<br>    sock.connect((<a href=\"http://self.host/\">self.host</a>, self.port))\r<br>socket.timeout: timed out",
+            "likes": 0,
+            "publish_time": "2020-09-15T08:12:50Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@dinner4262",
+            "text": "hello, maybe it&#39;s silly question, but is there a cost for using these api? billing page on google makes it sound like I pay for each request but I could not understand, you talk like it is free though. Thanks anyone to clarify",
+            "likes": 0,
+            "publish_time": "2020-09-12T21:42:38Z",
+            "reply_count": 1
+        },
+        {
+            "author": "@alphabetsalphabets5242",
+            "text": "I have been having trouble with navigation on a documentation on anything really. But this video just showed me how to utilize the documentation or at least a general way to use the documentation. Thank you so much.",
+            "likes": 2,
+            "publish_time": "2020-09-12T09:32:34Z",
+            "reply_count": 1
+        },
+        {
+            "author": "@raoai455",
+            "text": "Code worked exactly, A great introductory example.Please tell if possible How people or companies use these data to  their benefit? Many heartfelt thanks.",
+            "likes": 0,
+            "publish_time": "2020-09-11T19:24:55Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@syrnaya_narezka",
+            "text": "Thanks! You are best!",
+            "likes": 0,
+            "publish_time": "2020-09-10T09:36:24Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@harvs5126",
+            "text": "If you reply I will peepeepoopoo",
+            "likes": 0,
+            "publish_time": "2020-09-09T19:20:15Z",
+            "reply_count": 2
+        },
+        {
+            "author": "@processorbot8761",
+            "text": "thank you Corey! Just what i needed to help me make my next video",
+            "likes": 0,
+            "publish_time": "2020-09-07T04:09:07Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@superbunnybonkers9756",
+            "text": "This video was commented by me using the YT api!!!!!!!",
+            "likes": 1,
+            "publish_time": "2020-09-02T17:22:28Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@maniji5756",
+            "text": "Thanks a lot for all your tutorials ! All videos  are very easy and clear to follow !",
+            "likes": 0,
+            "publish_time": "2020-09-01T13:18:40Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@coderart__2802",
+            "text": "Hi sir , I am not able to find username of any channel - including mine .",
+            "likes": 0,
+            "publish_time": "2020-08-31T15:20:20Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@coderart__2802",
+            "text": "How dare, someone even dislikes your video. Your the best teacher i have ever found in my life. Awating for more and more videos of you.",
+            "likes": 0,
+            "publish_time": "2020-08-31T09:35:39Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@anakhalal5803",
+            "text": "Never. Never stop making these.",
+            "likes": 0,
+            "publish_time": "2020-08-25T02:02:55Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@carlosfuenzalida7278",
+            "text": "excellent video, thank you!!!",
+            "likes": 0,
+            "publish_time": "2020-08-22T17:00:33Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@justmy2centx632",
+            "text": "I need a script that will auto like all your videos Corey. Amazing instructor as always.",
+            "likes": 0,
+            "publish_time": "2020-08-22T09:12:19Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@ClipFlipMedia",
+            "text": "Hi Corey,<br>I tried the same code and below is the error I get (IDE Pycharm)<br><br>ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1108)",
+            "likes": 0,
+            "publish_time": "2020-08-19T12:02:40Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@pcwinstead",
+            "text": "Great stuff. Thank you. I tried going the User Data route, setting up an oauth2 client, and when I went to install the oauth2client module in Python it didn&#39;t work. I found out it was deprecated. Any advice on getting that to work? Thanks!",
+            "likes": 0,
+            "publish_time": "2020-08-11T19:49:28Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@kebabsharif9627",
+            "text": "hi very interesting video ,can you please make a video tutorial  for uploading multiple video from a folder on yoube with private status .",
+            "likes": 0,
+            "publish_time": "2020-08-11T01:08:02Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@akuma0009",
+            "text": "Can you do tutorials facebook, twitter API&#39;s  , how post a comment on a user wall  or send tweet , can&#39;t find a video for &quot;FB_User_wall_feeds&quot;,<br>  THANKS&lt;3",
+            "likes": 0,
+            "publish_time": "2020-08-08T17:19:16Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@TheNewTravel",
+            "text": "Just a heads up for anyone doing this, don&#39;t forget that for YouTube, your username is not the same as your custom channel url.<br><br>Custom channel url is the one that you find when typing in your address, right after /c/ ....<br>Your channel name, of course is what shows up when you type (mine&#39;s The New Travel)... <br>But your username is something different! Actually, I don&#39;t even know what my username is...<br><br> in this case I got this working by using &quot;id = &#39; &#39; &quot; instead of username... which is something different altogether!<br><br>Anyway, hope that explanation made sense. Not sure why YouTube made identifying channels so needlessly complicated haha",
+            "likes": 46,
+            "publish_time": "2020-08-08T05:13:10Z",
+            "reply_count": 7
+        },
+        {
+            "author": "@akshayc8435",
+            "text": "I was not able to get results. Its saying ModuleNotFoundError: No module named &#39;googleapiclient&#39;",
+            "likes": 2,
+            "publish_time": "2020-08-03T20:49:03Z",
+            "reply_count": 3
+        },
+        {
+            "author": "@conscioussleeppill1093",
+            "text": "I am new member in your Subscriber list .. It is my fav channel",
+            "likes": 0,
+            "publish_time": "2020-08-03T11:28:40Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@yogeshm4171",
+            "text": "Hi Corey. I learned python from you. Thanks for that useful content. I would like to know which machine are you using. Macbook Pro or Macbook air?",
+            "likes": 0,
+            "publish_time": "2020-08-02T21:58:38Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@danieldasent-thomson5727",
+            "text": "Can you do a Django Rest Framework course?",
+            "likes": 0,
+            "publish_time": "2020-08-02T00:09:36Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@jasonreviews",
+            "text": "thanks corey I got it working. I gotta figure this out through JS tho. haha",
+            "likes": 0,
+            "publish_time": "2020-08-02T00:05:54Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@farhanhanavi3623",
+            "text": "How to access multiple variables for the &quot;part&quot; ?",
+            "likes": 0,
+            "publish_time": "2020-08-01T09:07:56Z",
+            "reply_count": 1
+        },
+        {
+            "author": "@rdius4822",
+            "text": "<a href=\"http://disord.py/\">disord.py</a> next please? Great tutorial! Keep on going and keep it up!",
+            "likes": 0,
+            "publish_time": "2020-07-29T16:26:09Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@davidobembe5302",
+            "text": "The way you explain concepts is second to none. 🙌",
+            "likes": 0,
+            "publish_time": "2020-07-24T23:41:37Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@psulinux",
+            "text": "Hey Corey thanks a lot for the tutorial and we are missing you in new ones<br><br>I have a question about this API, is there daily limitations? I have used google maps API and there was daily amount of data that I can take... Idk if it&#39;s the same for youtube API?",
+            "likes": 0,
+            "publish_time": "2020-07-24T15:37:59Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@daniel_liu_it",
+            "text": "is there having a playlists ? it seems just one video ....",
+            "likes": 0,
+            "publish_time": "2020-07-22T18:33:23Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@Lumary",
+            "text": "Very interesting, thanks for sharing! 😊",
+            "likes": 0,
+            "publish_time": "2020-07-22T04:53:33Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@steveq34",
+            "text": "I would like to know if I can retrieve my youtube watch duration. Eg. Retrieve my watch history + video duration + how long I watched each vid. Does anyone know of a project that does this, or very similar? Thanks!!",
+            "likes": 0,
+            "publish_time": "2020-07-19T06:42:23Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@BrianGlaze",
+            "text": "Hey Corey! I&#39;ve been working on the YouTube API for a few weeks now. I&#39;m trying to get a list of my own subscribers so of course that requires an OAuth2. I have it all set up but when I get the URL for the authorization code, I receive some sort of 400 error (dependent on adjustments I make). I can&#39;t seem to get around this. Any thoughts or possible video idea?",
+            "likes": 1,
+            "publish_time": "2020-07-14T04:32:30Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@cacheflex8033",
+            "text": "ModuleNotFoundError: No module named &#39;googleapiclient&#39;<br>Not sure if it&#39;s because I created the <a href=\"http://yt.py/\">yt.py</a> file outside the venv folder.<br><br>Update: It ran nicely on my terminal but It won&#39;t run from my VS code editor.",
+            "likes": 1,
+            "publish_time": "2020-07-07T00:01:21Z",
+            "reply_count": 2
+        },
+        {
+            "author": "@JordannGeorge",
+            "text": "thanks. this helped",
+            "likes": 0,
+            "publish_time": "2020-06-30T13:29:05Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@HoangNguyen-uo8sy",
+            "text": "Thank you, Corey, this is a very informative video! I&#39;m interested in learning about the Wordpress API and I&#39;m wondering if you can do a Wordpress API tutorial? Thank you!",
+            "likes": 0,
+            "publish_time": "2020-06-28T01:22:59Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@surbhiagrawal3951",
+            "text": "Thanks for great video.. can you provide link for your further video",
+            "likes": 0,
+            "publish_time": "2020-06-25T17:59:01Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@Atlas-ck9vm",
+            "text": "This video is absolutely great.",
+            "likes": 0,
+            "publish_time": "2020-06-19T17:04:37Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@sarbazkhurasani",
+            "text": "today I was watching your python matplotlib video from jun 2019 :)) you talked about youtube api,Now you&#39;ve created . you&#39;re the best corey thanksssss",
+            "likes": 0,
+            "publish_time": "2020-06-18T13:17:25Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@CMadisife",
+            "text": "I was referred here from linkedIn. The travel was worth it and I&#39;m grateful. Subscribed! alert = &quot;All&quot;.",
+            "likes": 1,
+            "publish_time": "2020-06-17T14:40:20Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@pckeyboardpiano6827",
+            "text": "I am a worker , not a coder , but I found a really big help on your channel for my self learning . Thank you so much. Really hope someday I can become a software developer :)",
+            "likes": 1,
+            "publish_time": "2020-06-17T04:07:33Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@ragavsathis",
+            "text": "I learned python by following your videos. Was waiting to start API automation. Thanks for your effort !!!",
+            "likes": 2,
+            "publish_time": "2020-06-16T09:12:15Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@idknuttin",
+            "text": "anyone know why when i go on some youtube channels the url doesnt say &#39;/user/&#39; then their username, instead it says &#39;/channel/&#39; then many random characters and numbers. One example is if you look at the new york yankees youtube channel?",
+            "likes": 0,
+            "publish_time": "2020-06-15T15:25:50Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@MohamedRamadan-di4yt",
+            "text": "Why comment count is zero!",
+            "likes": 0,
+            "publish_time": "2020-06-15T01:28:04Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@farhanhanavi3623",
+            "text": "Need more of this!<br>Thank you so much for making amazing videos.",
+            "likes": 1,
+            "publish_time": "2020-06-13T06:16:59Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@DanFMN",
+            "text": "This video came just in time for my youtube discord bot! Thanks for the help.",
+            "likes": 2,
+            "publish_time": "2020-06-11T17:44:01Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@programmingexpress9302",
+            "text": "Bro if possible please make vedio on react",
+            "likes": 0,
+            "publish_time": "2020-06-11T12:27:09Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@sadmansakibmugdho4134",
+            "text": "In some of your videos, I saw that you select multiple lines and instantly a # comes in front of the line. That means you comment some lines by selecting them and after some keyboard shortcuts, you comment them instantly. I want to know that keyboard shortcut. Please.",
+            "likes": 0,
+            "publish_time": "2020-06-11T12:11:45Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@AlmazUsonUulu",
+            "text": "Finally!",
+            "likes": 1,
+            "publish_time": "2020-06-11T11:55:15Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@blaze-pn6fk",
+            "text": "Can you please make videos on machine learning.",
+            "likes": 0,
+            "publish_time": "2020-06-09T07:51:44Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@متعةالمحققكونان9",
+            "text": "Google Docs, always like rubbish. but Corey Schafer is Awesome!😍\r<br>Blogger com still use Date in URL :)😂😂",
+            "likes": 3,
+            "publish_time": "2020-06-08T23:42:28Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@codewithkg9096",
+            "text": "Dear Corey, Mate can you maker series  on djnago rest api framework.<br>I have been waiting for that so long, it has not released yet. So requesting for one🙏🙏 Please, udemy is just wasting my time...",
+            "likes": 0,
+            "publish_time": "2020-06-08T20:13:33Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@shaktird",
+            "text": "You speak very lucidly.",
+            "likes": 1,
+            "publish_time": "2020-06-07T07:50:25Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@ktd7979",
+            "text": "Thanks for the tutorial! Is there a limit on how many times we can call an API key in our code?",
+            "likes": 0,
+            "publish_time": "2020-06-07T06:06:03Z",
+            "reply_count": 1
+        },
+        {
+            "author": "@siddharthmarathe4235",
+            "text": "Bro, I&#39;m working on a personal project. I need a hand with pymodbus library. Hoping for your response.",
+            "likes": 0,
+            "publish_time": "2020-06-06T03:45:54Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@lukebircharchive3833",
+            "text": "Can you please do a video on numpy",
+            "likes": 0,
+            "publish_time": "2020-06-05T14:41:53Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@danielhammond3341",
+            "text": "Hey guys,<br>If anyone could help me with this code I&#39;d be much appreciated!<br><br>&quot;&quot;<br><br>request = youtube.commentThreads.list((\r<br>part=[&#39;Coronavirus&#39;]\r<br>)<br><br>&quot;&quot;<br><br>^^ is this the right way to request all comment threads relating to &#39;Coronavirus&#39;? Apologies for the simplicity of the question, I&#39;ve not quite got the gist of the documentation yet.<br><br><a href=\"http://googleapis.github.io/google-api-python-client/docs/dyn/youtube_v3.commentThreads.html\">http://googleapis.github.io/google-api-python-client/docs/dyn/youtube_v3.commentThreads.html</a><br><br>Thanks",
+            "likes": 0,
+            "publish_time": "2020-06-04T21:26:17Z",
+            "reply_count": 2
+        },
+        {
+            "author": "@vishvips",
+            "text": "I am so grateful for all these real life practical videos. I never thought that I would be able to play with youtube data in less than 30 minutes 😁. Lot of times I lost interest figuring out where to start with projects like this. Step-by-step is really building up the confidence. Thanks again!!!",
+            "likes": 10,
+            "publish_time": "2020-06-04T20:03:03Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@tejasvix",
+            "text": "I liked your this video using the youtube api itself.. if was fun, thanks for amazing tutorial.",
+            "likes": 0,
+            "publish_time": "2020-06-04T15:49:54Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@JosephTyndaleRay",
+            "text": "What datatype would the response variable be? A string array?",
+            "likes": 0,
+            "publish_time": "2020-06-04T14:07:43Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@sierz.stradtord7883",
+            "text": "Does one have to pay to obtain and use the Youtube API via Google Console?",
+            "likes": 0,
+            "publish_time": "2020-06-04T09:20:55Z",
+            "reply_count": 2
+        },
+        {
+            "author": "@mustafahany6264",
+            "text": "i find this in the url &lt; <a href=\"https://www.youtube.com/channel/UCTZRcDjjkVajGL6wd76UnGg/videos\">https://www.youtube.com/channel/UCTZRcDjjkVajGL6wd76UnGg/videos</a> &gt; how can i get the username of this channel",
+            "likes": 0,
+            "publish_time": "2020-06-02T14:31:04Z",
+            "reply_count": 1
+        },
+        {
+            "author": "@nadikapoudel3043",
+            "text": "You made it so much easier to understand. The best tutor ever!!!!",
+            "likes": 3,
+            "publish_time": "2020-06-02T05:36:50Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@el_munoz",
+            "text": "MapQuest API or other Geographic API will be great to explore.",
+            "likes": 0,
+            "publish_time": "2020-06-02T01:53:54Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@philinnc",
+            "text": "Really interesting content and as usual great presentation. Thanks!",
+            "likes": 1,
+            "publish_time": "2020-06-01T14:43:47Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@keshavjha9835",
+            "text": "sir, can you make a video on functools module in python?",
+            "likes": 0,
+            "publish_time": "2020-06-01T12:36:14Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@user-or7ji5hv8y",
+            "text": "how do we find our own forUsername? if anyone knows.",
+            "likes": 0,
+            "publish_time": "2020-06-01T06:39:52Z",
+            "reply_count": 1
+        },
+        {
+            "author": "@digigoliath",
+            "text": "Thanks. Me, I am SMASHING the LIKE button like crazy!!!",
+            "likes": 7,
+            "publish_time": "2020-06-01T05:41:47Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@simajacob7416",
+            "text": "Corey, please tell me what are the benefits of joining this channel and paying that fees monthly. are there any better resources than what we have on your youtube channel for python and django.  DO you have any Udemy course on python?",
+            "likes": 0,
+            "publish_time": "2020-05-31T23:43:58Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@santiagotorres6929",
+            "text": "You are  by far the best teacher in the earth. Your videos are amazing, I&#39;ve been following along your content and it&#39;s been so helpful, thank you dude.",
+            "likes": 1,
+            "publish_time": "2020-05-31T23:31:04Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@araujohs",
+            "text": "Hey, Corey! Thanks for the video. As always, very useful. Are you planning to show us how to upload videos do youtube?",
+            "likes": 0,
+            "publish_time": "2020-05-31T16:15:23Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@sayantanpaul6174",
+            "text": "Just wanna ask are you familiar with &quot;vim&quot; text editor and if true:<br>    please make a video on how to build a vim editor for python development<br>else:<br>    echo &#39;Hi! your videos are awesome !!&#39;",
+            "likes": 0,
+            "publish_time": "2020-05-31T15:33:15Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@rahulkumarbarik7584",
+            "text": "G.O.A.T Corey Schaefer 😎😎",
+            "likes": 2,
+            "publish_time": "2020-05-31T10:48:37Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@nghiepcrypto7034",
+            "text": "Hi Corey, I have followed your channel for  a year, since I didnt learn python. Python for DA is getting popular these days. And I wonder if we can use Python for most of DA tasks and barely use Excel? <br>I worked with Youtube API, I wished you got a tutorial on it. And now you did, but I&#39;m done with it.haha",
+            "likes": 1,
+            "publish_time": "2020-05-31T02:25:21Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@wajdi1509",
+            "text": "Great!! Thank you",
+            "likes": 2,
+            "publish_time": "2020-05-31T02:09:42Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@kyleropp6634",
+            "text": "Thanks for the video Corey. Quick question - How do you find the filter information when the parameter isn&#39;t &quot;forUsername&quot;? For instance, I was trying to find a way to query comments from a video, but have no clue how to find the ID parameter for any given comment. Is there a way to automate the search, so I don&#39;t have to look it up on youtube each time?",
+            "likes": 0,
+            "publish_time": "2020-05-30T23:36:58Z",
+            "reply_count": 2
+        },
+        {
+            "author": "@trespasserontheloose",
+            "text": "I watch yours and sentdex&#39;s channel all the time. Great video, Corey. Very informative.",
+            "likes": 1,
+            "publish_time": "2020-05-30T23:19:36Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@dixitadangar8121",
+            "text": "best best best !!",
+            "likes": 1,
+            "publish_time": "2020-05-30T18:08:22Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@esspi9",
+            "text": "THANK YOU !! THANK YOU !!",
+            "likes": 1,
+            "publish_time": "2020-05-30T17:20:14Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@sandyv3590",
+            "text": "I don&#39;t see anything about  lambda functions in the playlists. Am I missing something?",
+            "likes": 0,
+            "publish_time": "2020-05-30T14:25:59Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@absar66",
+            "text": "👍👍👍 great",
+            "likes": 1,
+            "publish_time": "2020-05-30T13:56:13Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@flintskeen1828",
+            "text": "Thanks Corey for sharing your knowledge. Not only do I learn from you but also enjoy the way you teach. You are a wonderful teacher.",
+            "likes": 2,
+            "publish_time": "2020-05-30T11:54:54Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@courtney2394",
+            "text": "For someone learning Python independently and without a CS or SE degree, you have made things extremely simple. I cannot thank you enough! Life lessons that are unbelievably valuable, thank you again, sir!",
+            "likes": 14,
+            "publish_time": "2020-05-30T11:18:26Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@VishvadeepGothi",
+            "text": "Very Very interesting the video is.. Eagerly waiting for more videos..",
+            "likes": 1,
+            "publish_time": "2020-05-30T09:14:41Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@atulsingh29",
+            "text": "you always post great content ❤️. Thank you sir! <br>Please upload videos on Instagram API",
+            "likes": 1,
+            "publish_time": "2020-05-30T08:51:11Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@rangabharath4253",
+            "text": "Awesome. Thank u so much",
+            "likes": 1,
+            "publish_time": "2020-05-30T08:20:32Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@ibcomputing",
+            "text": "wonderful ..!<br>how we can get the live subscriber count of a channel ?",
+            "likes": 0,
+            "publish_time": "2020-05-30T07:33:24Z",
+            "reply_count": 2
+        },
+        {
+            "author": "@sidhurawool2580",
+            "text": "hii corey , thank you for such great videos <br>i had a request for you can you please create a video over django react framework ?",
+            "likes": 0,
+            "publish_time": "2020-05-30T07:11:17Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@streamx2",
+            "text": "I cant get it to work. I created a virtual environment, do I create the <a href=\"http://yt.py/\">yt.py</a> file inside the project_env folder? I created another folder called getting started inside the project_env folder with a file called <a href=\"http://yt.py/\">yt.py</a>. I get the importerror no module named googleapiclient.discovery",
+            "likes": 0,
+            "publish_time": "2020-05-30T07:01:45Z",
+            "reply_count": 3
+        },
+        {
+            "author": "@f-m",
+            "text": "Can I use Google Drive API in a python script to automatically sync the files on my computer with my Google Drive storage?",
+            "likes": 0,
+            "publish_time": "2020-05-30T06:41:38Z",
+            "reply_count": 1
+        },
+        {
+            "author": "@sunilkumargupta7980",
+            "text": "Is there any video to get statistics for a FB channels also ?<br>Please help",
+            "likes": 0,
+            "publish_time": "2020-05-30T05:45:45Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@sunilkumargupta7980",
+            "text": "Awsome video. Literally love your content.",
+            "likes": 1,
+            "publish_time": "2020-05-30T05:44:47Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@alexk7110",
+            "text": "I was looking for a fast way to clean up my 700+ &quot;watch later&quot; playlist just a couple of days ago. Now I can throw Python into the mix and make it even more interesting. Thank you for all the amazing tutorials, you&#39;re making life so much easier for us self taught folk!",
+            "likes": 2,
+            "publish_time": "2020-05-30T05:40:36Z",
+            "reply_count": 1
+        },
+        {
+            "author": "@CaioTeixeira19951",
+            "text": "The Google docs for their APIs must be a little confusing for who is starting, and you make it easy.<br><br>Thanks Corey for all your vídeos i&#39;ve upgraded my carreer watching to you! Greetings from Brazil",
+            "likes": 4,
+            "publish_time": "2020-05-30T03:59:41Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@vaibhavkrkm",
+            "text": "Love your tutorials, they are really so cool💧👍👍",
+            "likes": 2,
+            "publish_time": "2020-05-30T03:52:43Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@okskaren",
+            "text": "Corey I&#39;M SO HAPPYYYYYYYYYYY OMG",
+            "likes": 1,
+            "publish_time": "2020-05-30T03:13:42Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@nhido9160",
+            "text": "Hope you more video like this topic :3",
+            "likes": 1,
+            "publish_time": "2020-05-30T02:13:01Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@jaybit9947",
+            "text": "Would love some more web app tutorials. The flask series was one of my favorite tutorials ever! Extremely informative.",
+            "likes": 0,
+            "publish_time": "2020-05-30T01:23:37Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@Keitaro420Gamer",
+            "text": "With this API can I have a list of my channel&#39;s subscribers?",
+            "likes": 1,
+            "publish_time": "2020-05-30T00:30:58Z",
+            "reply_count": 1
+        },
+        {
+            "author": "@Ra131359",
+            "text": "As a teacher myself,  you are awesome in teaching new concepts in the easiest way. Thank you.",
+            "likes": 3,
+            "publish_time": "2020-05-30T00:27:41Z",
+            "reply_count": 1
+        },
+        {
+            "author": "@developerdomain369",
+            "text": "Please keep posting more for google apis",
+            "likes": 1,
+            "publish_time": "2020-05-29T22:38:57Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@nawendusingh2858",
+            "text": "Corey please do new Flask and Django  projects.",
+            "likes": 0,
+            "publish_time": "2020-05-29T21:35:09Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@ivanowdenis",
+            "text": "Wow, Corey. I just started to write a bot for youtube and than I see a notifications about your new video and it exactly about youtube )) I don&#39;t watch every your video because I don&#39;t have a lot of time, but this I watched for the last second. You are great python bloger(especially for beginners)",
+            "likes": 2,
+            "publish_time": "2020-05-29T21:15:18Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@amazing-graceolutomilayo5041",
+            "text": "Yaay he got it to work. Thank you sir",
+            "likes": 1,
+            "publish_time": "2020-05-29T20:42:26Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@edstubranton",
+            "text": "I&#39;m currently looking for a way to upload videos with the YouTube API, I haven&#39;t looked into it yet since I started searching for it yesterday. But I&#39;m hoping to find a trigger in the YouTube API that signals that the video upload has been completed so that I can use that trigger to signal my computer to shut down. Since my internet connection is a bit slower I want to start the upload when I&#39;m heading off to work since longer videos can take multiple hours to upload but I don&#39;t want my computer to run while not doing anything so that&#39;s why I&#39;d like to be able to do this. <br><br>Would you be interested in including some information on that topic as well maybe? Or maybe just an info on whether or not it is possible and where to find the information? I think I should be able to find the rest myself and with the added knowledge from you about how the YouTube API works in general I should be able to learn the rest. ;)<br><br>Also Thank you for your videos. You taught me a lot about Python already. :)",
+            "likes": 0,
+            "publish_time": "2020-05-29T20:34:13Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@మరుపిళ్ల",
+            "text": "This is how we dig documentation in realtime.",
+            "likes": 0,
+            "publish_time": "2020-05-29T20:06:27Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@mashoodurrehman9840",
+            "text": "great stuff as ever",
+            "likes": 2,
+            "publish_time": "2020-05-29T20:05:04Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@mashoodurrehman9840",
+            "text": "please make some video on how to subscribe a youtube channel from python script",
+            "likes": 0,
+            "publish_time": "2020-05-29T20:04:39Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@ZOOSnippets",
+            "text": "This is helping me so much. Thank you for the vid about the Youtube API!",
+            "likes": 2,
+            "publish_time": "2020-05-29T20:03:11Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@ARoundThing",
+            "text": "Hey Corey, I love that your videos are detailed and feel like something that one could learn by themselves. You are an excellent teacher. I&#39;ve learned Django and Python because of you. The amount of details that you show in your tutorials helps me become more confident. Will you post videos relating to Machine Learning or Deep Neural Network using tensorflow? I am trying to find resources, but the official documentation is too much and the Harvard CS50 ones are really long and difficult to understand. Thank you.",
+            "likes": 10,
+            "publish_time": "2020-05-29T19:14:35Z",
+            "reply_count": 1
+        },
+        {
+            "author": "@djuka8121",
+            "text": "This is interesting and very useful! Nice Corey, can&#39;t wait for the next video!",
+            "likes": 1,
+            "publish_time": "2020-05-29T19:04:52Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@suryatejasunny",
+            "text": "I wish I had a teacher like you",
+            "likes": 31,
+            "publish_time": "2020-05-29T18:33:10Z",
+            "reply_count": 1
+        },
+        {
+            "author": "@leoncruz9757",
+            "text": "Best online Python tutor! Besides the excellent contents, your  charming voice and clear articulation is so friendly to non-native English speakers🥰",
+            "likes": 7,
+            "publish_time": "2020-05-29T18:20:07Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@andreyshevchenko5925",
+            "text": "Nice!Great Job.",
+            "likes": 1,
+            "publish_time": "2020-05-29T18:06:33Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@FaithBiete",
+            "text": "I have learned a lot from your python tutorial.",
+            "likes": 2,
+            "publish_time": "2020-05-29T17:41:19Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@tymurfullsend",
+            "text": "Incredible job! Thank you for the videos! Corey - G.O.A.T. &amp; Corey’s channel is one of the best if not the best and the most trustworthy source for compsci educational purposes",
+            "likes": 5,
+            "publish_time": "2020-05-29T17:40:12Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@saladmaster3496",
+            "text": "wow, i was just thinking about learning youtube api for fun, here you go, my man made it",
+            "likes": 1,
+            "publish_time": "2020-05-29T17:37:09Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@nickt423",
+            "text": "This is unrelated but can you please do a video on the process of how to move a local Django project from one computer to another? I don&#39;t really see much information on the internet on how to do that.",
+            "likes": 0,
+            "publish_time": "2020-05-29T17:29:02Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@shreyasmavle8276",
+            "text": "Hi Corey. I always watch at least one of your videos everyday so that I can learn something new. Thanks for such great content. Can you make a video on Docker, ECS?",
+            "likes": 0,
+            "publish_time": "2020-05-29T17:21:08Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@ankandatta4352",
+            "text": "Thanks teach",
+            "likes": 2,
+            "publish_time": "2020-05-29T17:18:15Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@b00i00d",
+            "text": "Great topic!",
+            "likes": 2,
+            "publish_time": "2020-05-29T17:12:20Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@NachiketPusalkar",
+            "text": "You are the best, Corey. Thank you so much.",
+            "likes": 2,
+            "publish_time": "2020-05-29T17:05:10Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@ramil17998",
+            "text": "If you are having difficulties finding your own username, make sure to go to your channel in an incognito mode and you will then see it in the url as <a href=\"http://youtube.com/user/%3CUSERNAME%3E\">youtube.com/user/&lt;USERNAME&gt;</a>. Otherwise, if you are signed in, it might show as <a href=\"http://youtube.com/channel/%3CCHANNEL\">youtube.com/channel/&lt;CHANNEL</a> ID&gt;?view_as=subscriber",
+            "likes": 1,
+            "publish_time": "2020-05-29T16:58:57Z",
+            "reply_count": 1
+        },
+        {
+            "author": "@zangruver132",
+            "text": "OMG I WAS LITERALLY JUST LEARNING THIS AND BANGING MY HEAD ON. THANK YOU!!",
+            "likes": 16,
+            "publish_time": "2020-05-29T16:54:24Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@mahbubaakter2913",
+            "text": "Django rest api please",
+            "likes": 3,
+            "publish_time": "2020-05-29T16:51:01Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@BiffBifford",
+            "text": "Corey, I just downloaded a tutorial on this very topic last night! It&#39;s like you read the mind of thousands of python users and met the challenge! I am fresh off the treadmill and with a watermelon coconut water ready to dive right in... but first, I AM GOING TO HIT THAT THUMBS UP!",
+            "likes": 2,
+            "publish_time": "2020-05-29T16:50:23Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@rrahll",
+            "text": "Cool, thank you!",
+            "likes": 4,
+            "publish_time": "2020-05-29T16:33:39Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@ganuwattamwar6617",
+            "text": "Your each fill me new drop knowledge in python.your contribution to us is <a href=\"http://splendid.youtube/\">splendid.youtube</a> must support you , also encourage you do more video for us.<br>Thanks coder God.🙏🙏🙌",
+            "likes": 1,
+            "publish_time": "2020-05-29T16:30:57Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@runtimeterror5365",
+            "text": "You are a great teacher sir. <br>Your voice is so soothing that I play your videos as white noise. Not kidding.",
+            "likes": 1,
+            "publish_time": "2020-05-29T16:29:45Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@jailnet",
+            "text": "Can you create a mobile app using GUI",
+            "likes": 0,
+            "publish_time": "2020-05-29T16:29:36Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@jxggxr_dxv",
+            "text": "I never subscribed to a channel faster in my life. In fact, I rarely subscribe... I only do it if I consider that all the creator&#39;s content would interest me. <br>Thank you very much Corey for your time and effort.",
+            "likes": 30,
+            "publish_time": "2020-05-29T16:29:10Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@saralgyaan",
+            "text": "Was waiting for it since long... Thanks a lot...",
+            "likes": 1,
+            "publish_time": "2020-05-29T16:25:52Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@michealnd969",
+            "text": "You are awesome.<br>But it will be nice if you make series on django rest framework.<br><br>During my schooling days, thenewboston was my favourite youtube channel.<br>Now it&#39;s Corey Schafer. Your teaching style one in no other.<br><br>GodBless, Hopefully soon one day i will be a patreon",
+            "likes": 11,
+            "publish_time": "2020-05-29T16:25:22Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@ashishthaakur45",
+            "text": "Sir please make video on make api with django and testing it with postman or something like that",
+            "likes": 0,
+            "publish_time": "2020-05-29T16:24:29Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@halim_Ha",
+            "text": "Corey you are the best I hope you are safe and healthy",
+            "likes": 1,
+            "publish_time": "2020-05-29T16:24:21Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@KaushikPal",
+            "text": "Thanks sir",
+            "likes": 3,
+            "publish_time": "2020-05-29T16:21:42Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@ThatOnlyFan",
+            "text": "Yay!",
+            "likes": 3,
+            "publish_time": "2020-05-29T16:21:26Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@jayasimhareddy2303",
+            "text": "your videos motivate me a lot, thanks Corey :)",
+            "likes": 3,
+            "publish_time": "2020-05-29T16:21:01Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@sillysully93",
+            "text": "👑",
+            "likes": 3,
+            "publish_time": "2020-05-29T16:19:50Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@yvzc4n",
+            "text": "You are the best. Big thanks for all the free content!",
+            "likes": 2,
+            "publish_time": "2020-05-29T16:19:29Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@priyanshuverma5773",
+            "text": "Best vid about the YouTube api, ngl",
+            "likes": 5,
+            "publish_time": "2020-05-29T16:19:29Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@karishmakaris7165",
+            "text": "sir can you please take classes creating Api using django",
+            "likes": 3,
+            "publish_time": "2020-05-29T16:19:22Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@harinath_mishra",
+            "text": "Thanks Corey Sir for providing video on yt Api",
+            "likes": 4,
+            "publish_time": "2020-05-29T16:19:09Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@imadahmad104",
+            "text": "Your channel is always opened on my laptop.",
+            "likes": 98,
+            "publish_time": "2020-05-29T16:18:54Z",
+            "reply_count": 5
+        },
+        {
+            "author": "@meetakc",
+            "text": "Thanks :)",
+            "likes": 3,
+            "publish_time": "2020-05-29T16:18:20Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@fabiancetina3847",
+            "text": "God bless you Corey, waiting for amazing videos in machine learning",
+            "likes": 15,
+            "publish_time": "2020-05-29T16:18:18Z",
+            "reply_count": 2
+        },
+        {
+            "author": "@SkyFly19853",
+            "text": "Wow... <br>is it about Kivy?",
+            "likes": 2,
+            "publish_time": "2020-05-29T16:18:05Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@waex7089",
+            "text": "First comment ❤",
+            "likes": 2,
+            "publish_time": "2020-05-29T16:18:02Z",
+            "reply_count": 0
+        },
+        {
+            "author": "@coreyms",
+            "text": "Hey everyone. This video will be the first video of several where we explore the YouTube API and see how to do some data analysis on public YouTube data. We will learn some useful things we can do with this API. In the next video, I&#39;ll show how we can use this API to calculate the total duration of a YouTube playlist, which is information that Google doesn&#39;t already have listed for playlists.<br>Also, I&#39;m still working on completing the script I&#39;ll use to grab my YouTube channel members, so the end credits for the videos still only contains Patreon supporters at the moment. But I hope to have this resolved shortly. Hope everyone had a great week!",
+            "likes": 113,
+            "publish_time": "2020-05-29T16:16:21Z",
+            "reply_count": 17
+        }
+    ],
+    "transcript": [
+        {
+            "text": "hey there how's it going everybody in",
+            "start_time": 0.0,
+            "duration": 2.73
+        },
+        {
+            "text": "this video we're going to be learning",
+            "start_time": 1.38,
+            "duration": 3.54
+        },
+        {
+            "text": "how to get started with using Python and",
+            "start_time": 2.73,
+            "duration": 4.649
+        },
+        {
+            "text": "the YouTube API so this will allow us to",
+            "start_time": 4.92,
+            "duration": 4.29
+        },
+        {
+            "text": "connect to YouTube's API to gather",
+            "start_time": 7.379,
+            "duration": 4.021
+        },
+        {
+            "text": "information from YouTube and do some",
+            "start_time": 9.21,
+            "duration": 4.679
+        },
+        {
+            "text": "analysis from within Python now there",
+            "start_time": 11.4,
+            "duration": 3.72
+        },
+        {
+            "text": "are a lot of things that I've used us",
+            "start_time": 13.889,
+            "duration": 3.421
+        },
+        {
+            "text": "for in the past so for example I've used",
+            "start_time": 15.12,
+            "duration": 4.919
+        },
+        {
+            "text": "this API to tally up the total duration",
+            "start_time": 17.31,
+            "duration": 5.67
+        },
+        {
+            "text": "of specific playlists to track channel",
+            "start_time": 20.039,
+            "duration": 5.671
+        },
+        {
+            "text": "subscriptions to do some analysis on",
+            "start_time": 22.98,
+            "duration": 5.219
+        },
+        {
+            "text": "trending videos and also to grab the",
+            "start_time": 25.71,
+            "duration": 4.739
+        },
+        {
+            "text": "most popular video from specific",
+            "start_time": 28.199,
+            "duration": 4.621
+        },
+        {
+            "text": "playlists and things like that and I'll",
+            "start_time": 30.449,
+            "duration": 4.38
+        },
+        {
+            "text": "make videos for all of those topics in",
+            "start_time": 32.82,
+            "duration": 3.84
+        },
+        {
+            "text": "the near future but before we do that",
+            "start_time": 34.829,
+            "duration": 4.531
+        },
+        {
+            "text": "we'll need to get started by creating an",
+            "start_time": 36.66,
+            "duration": 4.95
+        },
+        {
+            "text": "API key and connecting to Google",
+            "start_time": 39.36,
+            "duration": 5.1
+        },
+        {
+            "text": "Google's API in Python so that's what",
+            "start_time": 41.61,
+            "duration": 3.99
+        },
+        {
+            "text": "we're going to be doing in this video",
+            "start_time": 44.46,
+            "duration": 4.23
+        },
+        {
+            "text": "well learn how to create an API key how",
+            "start_time": 45.6,
+            "duration": 5.07
+        },
+        {
+            "text": "to find all the information that we need",
+            "start_time": 48.69,
+            "duration": 4.349
+        },
+        {
+            "text": "in the documentation and also make some",
+            "start_time": 50.67,
+            "duration": 4.47
+        },
+        {
+            "text": "simple API requests to make sure that",
+            "start_time": 53.039,
+            "duration": 4.171
+        },
+        {
+            "text": "everything is working properly so with",
+            "start_time": 55.14,
+            "duration": 3.45
+        },
+        {
+            "text": "that said let's go ahead and get started",
+            "start_time": 57.21,
+            "duration": 3.93
+        },
+        {
+            "text": "so first of all we're going to need to",
+            "start_time": 58.59,
+            "duration": 5.399
+        },
+        {
+            "text": "sign up for an API key in order for for",
+            "start_time": 61.14,
+            "duration": 5.49
+        },
+        {
+            "text": "us to use the YouTube API so to do this",
+            "start_time": 63.989,
+            "duration": 4.831
+        },
+        {
+            "text": "I'm going to navigate to my developers",
+            "start_time": 66.63,
+            "duration": 5.22
+        },
+        {
+            "text": "console over here on Google to get setup",
+            "start_time": 68.82,
+            "duration": 5.58
+        },
+        {
+            "text": "with all of this information so this is",
+            "start_time": 71.85,
+            "duration": 6.629
+        },
+        {
+            "text": "at console dot developers.google.com and",
+            "start_time": 74.4,
+            "duration": 7.05
+        },
+        {
+            "text": "I'll have links to all of these sites in",
+            "start_time": 78.479,
+            "duration": 4.171
+        },
+        {
+            "text": "the description section below",
+            "start_time": 81.45,
+            "duration": 3.48
+        },
+        {
+            "text": "now when you navigate to this page it",
+            "start_time": 82.65,
+            "duration": 3.99
+        },
+        {
+            "text": "could look slightly different than mine",
+            "start_time": 84.93,
+            "duration": 3.09
+        },
+        {
+            "text": "depending on whether or not you've",
+            "start_time": 86.64,
+            "duration": 3.659
+        },
+        {
+            "text": "already created a project I've deleted",
+            "start_time": 88.02,
+            "duration": 4.739
+        },
+        {
+            "text": "my previous project before this video so",
+            "start_time": 90.299,
+            "duration": 3.721
+        },
+        {
+            "text": "that I can start from scratch",
+            "start_time": 92.759,
+            "duration": 3.72
+        },
+        {
+            "text": "so if you haven't created a project yet",
+            "start_time": 94.02,
+            "duration": 3.779
+        },
+        {
+            "text": "then you should see a page that looks",
+            "start_time": 96.479,
+            "duration": 3.811
+        },
+        {
+            "text": "something like this so we should see a",
+            "start_time": 97.799,
+            "duration": 4.82
+        },
+        {
+            "text": "prompt over here on the far right for",
+            "start_time": 100.29,
+            "duration": 4.98
+        },
+        {
+            "text": "creating a new project and all you need",
+            "start_time": 102.619,
+            "duration": 5.381
+        },
+        {
+            "text": "to do is click on that and then give",
+            "start_time": 105.27,
+            "duration": 5.489
+        },
+        {
+            "text": "your project a name so for my name here",
+            "start_time": 108.0,
+            "duration": 5.07
+        },
+        {
+            "text": "I'm just going to type in YouTube API",
+            "start_time": 110.759,
+            "duration": 6.661
+        },
+        {
+            "text": "and then I will create and once we have",
+            "start_time": 113.07,
+            "duration": 5.85
+        },
+        {
+            "text": "a project created it should look",
+            "start_time": 117.42,
+            "duration": 3.57
+        },
+        {
+            "text": "something like this so first of all",
+            "start_time": 118.92,
+            "duration": 4.71
+        },
+        {
+            "text": "Google has a lot of API s and if this",
+            "start_time": 120.99,
+            "duration": 5.01
+        },
+        {
+            "text": "video is interesting to all of you then",
+            "start_time": 123.63,
+            "duration": 4.08
+        },
+        {
+            "text": "we can explore some of the other API is",
+            "start_time": 126.0,
+            "duration": 3.44
+        },
+        {
+            "text": "available to us through Google as well",
+            "start_time": 127.71,
+            "duration": 4.499
+        },
+        {
+            "text": "but we're wanting to use the YouTube API",
+            "start_time": 129.44,
+            "duration": 4.15
+        },
+        {
+            "text": "for this video",
+            "start_time": 132.209,
+            "duration": 3.75
+        },
+        {
+            "text": "so we need to enable this API before",
+            "start_time": 133.59,
+            "duration": 4.86
+        },
+        {
+            "text": "creating our key so to do this we can",
+            "start_time": 135.959,
+            "duration": 4.86
+        },
+        {
+            "text": "see that it says we don't have any API",
+            "start_time": 138.45,
+            "duration": 4.59
+        },
+        {
+            "text": "is available yet to use and that we need",
+            "start_time": 140.819,
+            "duration": 4.56
+        },
+        {
+            "text": "to enable one so I'm just going to go to",
+            "start_time": 143.04,
+            "duration": 5.309
+        },
+        {
+            "text": "their API library here and now we can",
+            "start_time": 145.379,
+            "duration": 5.011
+        },
+        {
+            "text": "search for an API so I'm just going to",
+            "start_time": 148.349,
+            "duration": 4.981
+        },
+        {
+            "text": "search for YouTube and we can see that",
+            "start_time": 150.39,
+            "duration": 5.04
+        },
+        {
+            "text": "we get a few different results here the",
+            "start_time": 153.33,
+            "duration": 3.629
+        },
+        {
+            "text": "one that I'm going to be using is going",
+            "start_time": 155.43,
+            "duration": 4.11
+        },
+        {
+            "text": "to be the YouTube data API so I'm going",
+            "start_time": 156.959,
+            "duration": 5.791
+        },
+        {
+            "text": "to click on that and then we will enable",
+            "start_time": 159.54,
+            "duration": 5.88
+        },
+        {
+            "text": "this and now that we've enabled the use",
+            "start_time": 162.75,
+            "duration": 5.13
+        },
+        {
+            "text": "of this API for our project now we can",
+            "start_time": 165.42,
+            "duration": 5.069
+        },
+        {
+            "text": "create an API key to do this it's",
+            "start_time": 167.88,
+            "duration": 4.829
+        },
+        {
+            "text": "linking us to a page up here that says",
+            "start_time": 170.489,
+            "duration": 4.051
+        },
+        {
+            "text": "create credentials so I'm going to go",
+            "start_time": 172.709,
+            "duration": 4.89
+        },
+        {
+            "text": "ahead and click on that and then it's",
+            "start_time": 174.54,
+            "duration": 4.62
+        },
+        {
+            "text": "going to ask us a couple of questions",
+            "start_time": 177.599,
+            "duration": 5.191
+        },
+        {
+            "text": "here about our what kind of credentials",
+            "start_time": 179.16,
+            "duration": 5.82
+        },
+        {
+            "text": "we need so which API are we're using",
+            "start_time": 182.79,
+            "duration": 4.02
+        },
+        {
+            "text": "we've only enabled one so I'm going to",
+            "start_time": 184.98,
+            "duration": 4.47
+        },
+        {
+            "text": "choose YouTube data API where will you",
+            "start_time": 186.81,
+            "duration": 6.33
+        },
+        {
+            "text": "be calling the API from I am going to be",
+            "start_time": 189.45,
+            "duration": 6.09
+        },
+        {
+            "text": "using let's see I'm just gonna pick",
+            "start_time": 193.14,
+            "duration": 6.24
+        },
+        {
+            "text": "other non-ui cron job daemon here at the",
+            "start_time": 195.54,
+            "duration": 5.49
+        },
+        {
+            "text": "bottom since I'm just gonna be running",
+            "start_time": 199.38,
+            "duration": 3.78
+        },
+        {
+            "text": "this from a Python script but if you're",
+            "start_time": 201.03,
+            "duration": 4.56
+        },
+        {
+            "text": "running it from a web browser or a web",
+            "start_time": 203.16,
+            "duration": 5.01
+        },
+        {
+            "text": "server then you can select whatever",
+            "start_time": 205.59,
+            "duration": 4.019
+        },
+        {
+            "text": "option you're going to be using it for",
+            "start_time": 208.17,
+            "duration": 4.439
+        },
+        {
+            "text": "but I'm gonna go for non UI here and now",
+            "start_time": 209.609,
+            "duration": 4.74
+        },
+        {
+            "text": "we have this question what data will you",
+            "start_time": 212.609,
+            "duration": 5.46
+        },
+        {
+            "text": "be accessing so now it's going to ask us",
+            "start_time": 214.349,
+            "duration": 5.431
+        },
+        {
+            "text": "what type of credentials we don't want",
+            "start_time": 218.069,
+            "duration": 3.991
+        },
+        {
+            "text": "to create we can either create an API",
+            "start_time": 219.78,
+            "duration": 5.16
+        },
+        {
+            "text": "key which is used to access public",
+            "start_time": 222.06,
+            "duration": 5.37
+        },
+        {
+            "text": "information from YouTube and that's what",
+            "start_time": 224.94,
+            "duration": 4.769
+        },
+        {
+            "text": "we'll be doing in this video or we can",
+            "start_time": 227.43,
+            "duration": 4.709
+        },
+        {
+            "text": "create an OAuth client which is used for",
+            "start_time": 229.709,
+            "duration": 5.191
+        },
+        {
+            "text": "accessing private information from an",
+            "start_time": 232.139,
+            "duration": 4.32
+        },
+        {
+            "text": "account if a user is properly",
+            "start_time": 234.9,
+            "duration": 4.709
+        },
+        {
+            "text": "authenticated but so that would be user",
+            "start_time": 236.459,
+            "duration": 5.161
+        },
+        {
+            "text": "data here now in this video we're just",
+            "start_time": 239.609,
+            "duration": 4.141
+        },
+        {
+            "text": "accessing public information that anyone",
+            "start_time": 241.62,
+            "duration": 3.989
+        },
+        {
+            "text": "can find on YouTube so I'm gonna click",
+            "start_time": 243.75,
+            "duration": 5.16
+        },
+        {
+            "text": "on public data and now we can click on",
+            "start_time": 245.609,
+            "duration": 6.151
+        },
+        {
+            "text": "what credentials do I need and it should",
+            "start_time": 248.91,
+            "duration": 4.62
+        },
+        {
+            "text": "go ahead and tell us that we just need",
+            "start_time": 251.76,
+            "duration": 4.529
+        },
+        {
+            "text": "an API key and go ahead and give us our",
+            "start_time": 253.53,
+            "duration": 5.069
+        },
+        {
+            "text": "API key here now you can see here that",
+            "start_time": 256.289,
+            "duration": 4.38
+        },
+        {
+            "text": "there's also that they recommend",
+            "start_time": 258.599,
+            "duration": 4.051
+        },
+        {
+            "text": "restricting this key before it's used in",
+            "start_time": 260.669,
+            "duration": 4.8
+        },
+        {
+            "text": "production so you can restrict a key to",
+            "start_time": 262.65,
+            "duration": 4.89
+        },
+        {
+            "text": "like a single IP address",
+            "start_time": 265.469,
+            "duration": 3.871
+        },
+        {
+            "text": "or a couple of different other options",
+            "start_time": 267.54,
+            "duration": 3.45
+        },
+        {
+            "text": "there I'm not gonna do that in this",
+            "start_time": 269.34,
+            "duration": 3.93
+        },
+        {
+            "text": "video because I'm just going to delete",
+            "start_time": 270.99,
+            "duration": 3.96
+        },
+        {
+            "text": "this API key after this video is done",
+            "start_time": 273.27,
+            "duration": 3.57
+        },
+        {
+            "text": "but for now I'm gonna go ahead and copy",
+            "start_time": 274.95,
+            "duration": 4.25
+        },
+        {
+            "text": "that and now I'm going to click on done",
+            "start_time": 276.84,
+            "duration": 5.25
+        },
+        {
+            "text": "okay so now we've created our API key",
+            "start_time": 279.2,
+            "duration": 4.96
+        },
+        {
+            "text": "and on this page it will show us all of",
+            "start_time": 282.09,
+            "duration": 3.9
+        },
+        {
+            "text": "the keys I have available for this",
+            "start_time": 284.16,
+            "duration": 3.87
+        },
+        {
+            "text": "project so we can see that I have one",
+            "start_time": 285.99,
+            "duration": 5.82
+        },
+        {
+            "text": "API key here and that if I need to copy",
+            "start_time": 288.03,
+            "duration": 6.0
+        },
+        {
+            "text": "this again then I can just click this",
+            "start_time": 291.81,
+            "duration": 4.23
+        },
+        {
+            "text": "right here to copy this key and again",
+            "start_time": 294.03,
+            "duration": 4.14
+        },
+        {
+            "text": "don't worry I'm going to delete this API",
+            "start_time": 296.04,
+            "duration": 4.2
+        },
+        {
+            "text": "key after this video so you don't have",
+            "start_time": 298.17,
+            "duration": 4.08
+        },
+        {
+            "text": "to worry about anyone stealing this or",
+            "start_time": 300.24,
+            "duration": 4.47
+        },
+        {
+            "text": "anything like that now I know that I'm",
+            "start_time": 302.25,
+            "duration": 4.62
+        },
+        {
+            "text": "gonna be using this API key later within",
+            "start_time": 304.71,
+            "duration": 3.99
+        },
+        {
+            "text": "my Python script so I'm gonna go ahead",
+            "start_time": 306.87,
+            "duration": 4.74
+        },
+        {
+            "text": "and paste this into my empty script for",
+            "start_time": 308.7,
+            "duration": 4.89
+        },
+        {
+            "text": "later use and this is the script that",
+            "start_time": 311.61,
+            "duration": 6.45
+        },
+        {
+            "text": "I'm going to be using to write the code",
+            "start_time": 313.59,
+            "duration": 6.99
+        },
+        {
+            "text": "to connect to the API later so I'm going",
+            "start_time": 318.06,
+            "duration": 5.04
+        },
+        {
+            "text": "to just paste that here within a string",
+            "start_time": 320.58,
+            "duration": 4.56
+        },
+        {
+            "text": "now for the purpose of making things",
+            "start_time": 323.1,
+            "duration": 4.32
+        },
+        {
+            "text": "easy for this video I'm just gonna have",
+            "start_time": 325.14,
+            "duration": 4.74
+        },
+        {
+            "text": "this API key directly in my script here",
+            "start_time": 327.42,
+            "duration": 4.38
+        },
+        {
+            "text": "but when you work with api's you",
+            "start_time": 329.88,
+            "duration": 4.14
+        },
+        {
+            "text": "definitely want to keep the secret if",
+            "start_time": 331.8,
+            "duration": 4.62
+        },
+        {
+            "text": "someone gets ahold of your API key then",
+            "start_time": 334.02,
+            "duration": 4.02
+        },
+        {
+            "text": "they'll be able to access the API",
+            "start_time": 336.42,
+            "duration": 4.02
+        },
+        {
+            "text": "service on your behalf so if you ever",
+            "start_time": 338.04,
+            "duration": 4.56
+        },
+        {
+            "text": "think that an API key is lost or stolen",
+            "start_time": 340.44,
+            "duration": 4.47
+        },
+        {
+            "text": "then you'll need to delete it and create",
+            "start_time": 342.6,
+            "duration": 4.08
+        },
+        {
+            "text": "a new one now one way to keep these",
+            "start_time": 344.91,
+            "duration": 4.08
+        },
+        {
+            "text": "tokens and passwords safe is to put them",
+            "start_time": 346.68,
+            "duration": 4.62
+        },
+        {
+            "text": "in an environment variable or a secret",
+            "start_time": 348.99,
+            "duration": 4.59
+        },
+        {
+            "text": "configuration file that isn't committed",
+            "start_time": 351.3,
+            "duration": 5.28
+        },
+        {
+            "text": "to any of your repositories and I have a",
+            "start_time": 353.58,
+            "duration": 5.16
+        },
+        {
+            "text": "video on using environment variables for",
+            "start_time": 356.58,
+            "duration": 4.53
+        },
+        {
+            "text": "secret keys so if you'd like to see what",
+            "start_time": 358.74,
+            "duration": 3.96
+        },
+        {
+            "text": "that looks like then I'll leave a link",
+            "start_time": 361.11,
+            "duration": 3.15
+        },
+        {
+            "text": "to that video in the description section",
+            "start_time": 362.7,
+            "duration": 3.81
+        },
+        {
+            "text": "below okay so now that we have our API",
+            "start_time": 364.26,
+            "duration": 4.91
+        },
+        {
+            "text": "key we're ready to use the YouTube API",
+            "start_time": 366.51,
+            "duration": 5.49
+        },
+        {
+            "text": "using Python now I mentioned this in my",
+            "start_time": 369.17,
+            "duration": 4.51
+        },
+        {
+            "text": "last video when I worked with the",
+            "start_time": 372.0,
+            "duration": 4.68
+        },
+        {
+            "text": "patreon API but the documentation for",
+            "start_time": 373.68,
+            "duration": 4.68
+        },
+        {
+            "text": "these api's are going to be our best",
+            "start_time": 376.68,
+            "duration": 3.39
+        },
+        {
+            "text": "friend when developing anything like",
+            "start_time": 378.36,
+            "duration": 3.81
+        },
+        {
+            "text": "this luckily Google has some terrific",
+            "start_time": 380.07,
+            "duration": 5.13
+        },
+        {
+            "text": "documentation for their YouTube API now",
+            "start_time": 382.17,
+            "duration": 5.13
+        },
+        {
+            "text": "to find this you could just do a Google",
+            "start_time": 385.2,
+            "duration": 3.81
+        },
+        {
+            "text": "you know a simple google search for",
+            "start_time": 387.3,
+            "duration": 4.77
+        },
+        {
+            "text": "YouTube API but instead of the first",
+            "start_time": 389.01,
+            "duration": 5.67
+        },
+        {
+            "text": "result that you'd find on Google that",
+            "start_time": 392.07,
+            "duration": 3.84
+        },
+        {
+            "text": "takes you to their official",
+            "start_time": 394.68,
+            "duration": 4.02
+        },
+        {
+            "text": "documentation I'm instead going to open",
+            "start_time": 395.91,
+            "duration": 5.339
+        },
+        {
+            "text": "their Python client github",
+            "start_time": 398.7,
+            "duration": 5.369
+        },
+        {
+            "text": "imitation for now now I find this to be",
+            "start_time": 401.249,
+            "duration": 5.64
+        },
+        {
+            "text": "extremely useful since it has all the",
+            "start_time": 404.069,
+            "duration": 4.98
+        },
+        {
+            "text": "methods and arguments that we're going",
+            "start_time": 406.889,
+            "duration": 4.95
+        },
+        {
+            "text": "to be able to use within Python and",
+            "start_time": 409.049,
+            "duration": 4.86
+        },
+        {
+            "text": "they're all listed here now I've got",
+            "start_time": 411.839,
+            "duration": 3.6
+        },
+        {
+            "text": "this page pulled up in my browser",
+            "start_time": 413.909,
+            "duration": 3.69
+        },
+        {
+            "text": "already but like I said I'll be sure to",
+            "start_time": 415.439,
+            "duration": 3.69
+        },
+        {
+            "text": "link all of these pages and the",
+            "start_time": 417.599,
+            "duration": 2.94
+        },
+        {
+            "text": "description section below so that you",
+            "start_time": 419.129,
+            "duration": 4.26
+        },
+        {
+            "text": "can find them all right okay so this is",
+            "start_time": 420.539,
+            "duration": 4.98
+        },
+        {
+            "text": "the github page here and you can see",
+            "start_time": 423.389,
+            "duration": 4.74
+        },
+        {
+            "text": "that this is the Google API user and",
+            "start_time": 425.519,
+            "duration": 5.43
+        },
+        {
+            "text": "this is the Google API client for Python",
+            "start_time": 428.129,
+            "duration": 4.5
+        },
+        {
+            "text": "and I think they did a great job of",
+            "start_time": 430.949,
+            "duration": 3.63
+        },
+        {
+            "text": "documenting everything here so that it",
+            "start_time": 432.629,
+            "duration": 4.11
+        },
+        {
+            "text": "allows us to work with this API easily",
+            "start_time": 434.579,
+            "duration": 5.281
+        },
+        {
+            "text": "now if we scroll down then it will give",
+            "start_time": 436.739,
+            "duration": 5.04
+        },
+        {
+            "text": "us some installation instructions here",
+            "start_time": 439.86,
+            "duration": 4.439
+        },
+        {
+            "text": "if I scroll down to installation then",
+            "start_time": 441.779,
+            "duration": 4.41
+        },
+        {
+            "text": "it's going to tell us what we need to",
+            "start_time": 444.299,
+            "duration": 4.32
+        },
+        {
+            "text": "pip install in order to work with this",
+            "start_time": 446.189,
+            "duration": 5.04
+        },
+        {
+            "text": "API so this is the package that we need",
+            "start_time": 448.619,
+            "duration": 4.95
+        },
+        {
+            "text": "to install here Google API Python client",
+            "start_time": 451.229,
+            "duration": 4.89
+        },
+        {
+            "text": "and that's the same on Windows now",
+            "start_time": 453.569,
+            "duration": 4.05
+        },
+        {
+            "text": "they're showing you how to activate a",
+            "start_time": 456.119,
+            "duration": 4.2
+        },
+        {
+            "text": "virtual environment now you don't have",
+            "start_time": 457.619,
+            "duration": 4.89
+        },
+        {
+            "text": "to use a virtual environment in order to",
+            "start_time": 460.319,
+            "duration": 3.75
+        },
+        {
+            "text": "install this but I always recommend",
+            "start_time": 462.509,
+            "duration": 3.96
+        },
+        {
+            "text": "using these since it's just a good",
+            "start_time": 464.069,
+            "duration": 3.93
+        },
+        {
+            "text": "practice to use a different environment",
+            "start_time": 466.469,
+            "duration": 3.54
+        },
+        {
+            "text": "for each project now if you'd like to",
+            "start_time": 467.999,
+            "duration": 3.33
+        },
+        {
+            "text": "learn more about virtual environments",
+            "start_time": 470.009,
+            "duration": 2.73
+        },
+        {
+            "text": "then I'll be sure to leave a link to my",
+            "start_time": 471.329,
+            "duration": 3.84
+        },
+        {
+            "text": "video on that topic in the description",
+            "start_time": 472.739,
+            "duration": 5.13
+        },
+        {
+            "text": "section below as well okay so I'm going",
+            "start_time": 475.169,
+            "duration": 5.46
+        },
+        {
+            "text": "to go ahead and install this Google API",
+            "start_time": 477.869,
+            "duration": 6.36
+        },
+        {
+            "text": "Python client using pip now I've already",
+            "start_time": 480.629,
+            "duration": 7.35
+        },
+        {
+            "text": "got a virtual environment activated here",
+            "start_time": 484.229,
+            "duration": 6.32
+        },
+        {
+            "text": "so I'm just going to say pip install and",
+            "start_time": 487.979,
+            "duration": 6.18
+        },
+        {
+            "text": "install this Google API Python client so",
+            "start_time": 490.549,
+            "duration": 6.13
+        },
+        {
+            "text": "let's go ahead and install that okay so",
+            "start_time": 494.159,
+            "duration": 4.14
+        },
+        {
+            "text": "once that's finished installing let's go",
+            "start_time": 496.679,
+            "duration": 4.05
+        },
+        {
+            "text": "back to the browser and I'll show how we",
+            "start_time": 498.299,
+            "duration": 5.28
+        },
+        {
+            "text": "can use the documentation to see exactly",
+            "start_time": 500.729,
+            "duration": 5.4
+        },
+        {
+            "text": "what we need in order to work with this",
+            "start_time": 503.579,
+            "duration": 5.04
+        },
+        {
+            "text": "API correctly so I've got the browser",
+            "start_time": 506.129,
+            "duration": 4.8
+        },
+        {
+            "text": "back open here now I'm gonna scroll up",
+            "start_time": 508.619,
+            "duration": 5.55
+        },
+        {
+            "text": "here to the top and we can see here that",
+            "start_time": 510.929,
+            "duration": 6.03
+        },
+        {
+            "text": "it says to get started see the docs",
+            "start_time": 514.169,
+            "duration": 5.16
+        },
+        {
+            "text": "folder so I'm gonna open up this Doc's",
+            "start_time": 516.959,
+            "duration": 5.1
+        },
+        {
+            "text": "folder and a new tab here and then I'm",
+            "start_time": 519.329,
+            "duration": 4.77
+        },
+        {
+            "text": "going to scroll down here to the bottom",
+            "start_time": 522.059,
+            "duration": 6.59
+        },
+        {
+            "text": "and click on getting started and now",
+            "start_time": 524.099,
+            "duration": 7.8
+        },
+        {
+            "text": "let's take a look at what we need to get",
+            "start_time": 528.649,
+            "duration": 5.651
+        },
+        {
+            "text": "started using this API so we can see",
+            "start_time": 531.899,
+            "duration": 3.151
+        },
+        {
+            "text": "here that we've already",
+            "start_time": 534.3,
+            "duration": 2.76
+        },
+        {
+            "text": "done some of this so it tells us that if",
+            "start_time": 535.05,
+            "duration": 3.3
+        },
+        {
+            "text": "we don't have a Google account that we",
+            "start_time": 537.06,
+            "duration": 4.44
+        },
+        {
+            "text": "need to create one that we need to go to",
+            "start_time": 538.35,
+            "duration": 5.91
+        },
+        {
+            "text": "our Google API console and create a",
+            "start_time": 541.5,
+            "duration": 5.13
+        },
+        {
+            "text": "project and things like that",
+            "start_time": 544.26,
+            "duration": 5.91
+        },
+        {
+            "text": "we need to create an API key we've",
+            "start_time": 546.63,
+            "duration": 6.09
+        },
+        {
+            "text": "already done all of this so now that we",
+            "start_time": 550.17,
+            "duration": 4.95
+        },
+        {
+            "text": "have our API key we can go down here to",
+            "start_time": 552.72,
+            "duration": 4.5
+        },
+        {
+            "text": "building and calling a service this is",
+            "start_time": 555.12,
+            "duration": 4.649
+        },
+        {
+            "text": "the step that we are currently at so let",
+            "start_time": 557.22,
+            "duration": 4.47
+        },
+        {
+            "text": "me go ahead and read this real quick so",
+            "start_time": 559.769,
+            "duration": 4.021
+        },
+        {
+            "text": "it says that this section describes how",
+            "start_time": 561.69,
+            "duration": 4.41
+        },
+        {
+            "text": "to build an API specific service object",
+            "start_time": 563.79,
+            "duration": 4.68
+        },
+        {
+            "text": "make calls to the service and process",
+            "start_time": 566.1,
+            "duration": 4.62
+        },
+        {
+            "text": "the response whether you are using a",
+            "start_time": 568.47,
+            "duration": 5.22
+        },
+        {
+            "text": "simple or authorized API access you can",
+            "start_time": 570.72,
+            "duration": 4.89
+        },
+        {
+            "text": "use the build function to create a",
+            "start_time": 573.69,
+            "duration": 4.829
+        },
+        {
+            "text": "service object it takes an API name and",
+            "start_time": 575.61,
+            "duration": 5.849
+        },
+        {
+            "text": "API version as arguments you can see the",
+            "start_time": 578.519,
+            "duration": 5.01
+        },
+        {
+            "text": "list of all API versions at the",
+            "start_time": 581.459,
+            "duration": 4.831
+        },
+        {
+            "text": "supported api's page the service object",
+            "start_time": 583.529,
+            "duration": 5.581
+        },
+        {
+            "text": "is constructed constructed with methods",
+            "start_time": 586.29,
+            "duration": 5.58
+        },
+        {
+            "text": "specific to that given API so to create",
+            "start_time": 589.11,
+            "duration": 4.89
+        },
+        {
+            "text": "it you can do the following ok so we can",
+            "start_time": 591.87,
+            "duration": 3.69
+        },
+        {
+            "text": "see that we need to use this build",
+            "start_time": 594.0,
+            "duration": 4.019
+        },
+        {
+            "text": "function here and we need to pass in the",
+            "start_time": 595.56,
+            "duration": 5.85
+        },
+        {
+            "text": "API name and the API version let me go",
+            "start_time": 598.019,
+            "duration": 6.151
+        },
+        {
+            "text": "ahead and open up this build function",
+            "start_time": 601.41,
+            "duration": 4.56
+        },
+        {
+            "text": "here and see what this looks like",
+            "start_time": 604.17,
+            "duration": 4.08
+        },
+        {
+            "text": "so let me make this browser a little",
+            "start_time": 605.97,
+            "duration": 5.4
+        },
+        {
+            "text": "larger so that you all can see so we can",
+            "start_time": 608.25,
+            "duration": 4.829
+        },
+        {
+            "text": "see that we have this build function",
+            "start_time": 611.37,
+            "duration": 3.99
+        },
+        {
+            "text": "here and we need the service name we",
+            "start_time": 613.079,
+            "duration": 4.38
+        },
+        {
+            "text": "need the version for that service and",
+            "start_time": 615.36,
+            "duration": 4.56
+        },
+        {
+            "text": "then we can see here that it also takes",
+            "start_time": 617.459,
+            "duration": 4.891
+        },
+        {
+            "text": "in a developer key so the developer key",
+            "start_time": 619.92,
+            "duration": 7.409
+        },
+        {
+            "text": "is our API key so let me go back here so",
+            "start_time": 622.35,
+            "duration": 7.08
+        },
+        {
+            "text": "we need to know our service name and",
+            "start_time": 627.329,
+            "duration": 4.411
+        },
+        {
+            "text": "version an order to get to connect to a",
+            "start_time": 629.43,
+            "duration": 5.43
+        },
+        {
+            "text": "specific API and to find this they have",
+            "start_time": 631.74,
+            "duration": 5.789
+        },
+        {
+            "text": "the supported api's page listed here for",
+            "start_time": 634.86,
+            "duration": 4.11
+        },
+        {
+            "text": "us so that we can find the one that",
+            "start_time": 637.529,
+            "duration": 2.971
+        },
+        {
+            "text": "we're looking for so I'm going to open",
+            "start_time": 638.97,
+            "duration": 5.19
+        },
+        {
+            "text": "this up in a new tab and if I look at",
+            "start_time": 640.5,
+            "duration": 5.94
+        },
+        {
+            "text": "this then these are all their API s and",
+            "start_time": 644.16,
+            "duration": 4.5
+        },
+        {
+            "text": "API versions now instead of searching",
+            "start_time": 646.44,
+            "duration": 3.93
+        },
+        {
+            "text": "through this entire thing I'm just going",
+            "start_time": 648.66,
+            "duration": 4.23
+        },
+        {
+            "text": "to do a search for YouTube here so",
+            "start_time": 650.37,
+            "duration": 5.219
+        },
+        {
+            "text": "YouTube is the service name and we can",
+            "start_time": 652.89,
+            "duration": 5.4
+        },
+        {
+            "text": "see that it's all lowercase and Version",
+            "start_time": 655.589,
+            "duration": 5.37
+        },
+        {
+            "text": "three is the version now if I click on",
+            "start_time": 658.29,
+            "duration": 4.739
+        },
+        {
+            "text": "this v3 here I'm going to open this up",
+            "start_time": 660.959,
+            "duration": 4.771
+        },
+        {
+            "text": "in a new tab these are actually all of",
+            "start_time": 663.029,
+            "duration": 5.381
+        },
+        {
+            "text": "the instance methods available to us one",
+            "start_time": 665.73,
+            "duration": 4.99
+        },
+        {
+            "text": "we connect to this YouTube service so",
+            "start_time": 668.41,
+            "duration": 4.289
+        },
+        {
+            "text": "I'm going to leave this page open here",
+            "start_time": 670.72,
+            "duration": 4.83
+        },
+        {
+            "text": "so that we can reference this later but",
+            "start_time": 672.699,
+            "duration": 6.051
+        },
+        {
+            "text": "now I'm going to go back here to this",
+            "start_time": 675.55,
+            "duration": 6.12
+        },
+        {
+            "text": "building the service object so they",
+            "start_time": 678.75,
+            "duration": 4.48
+        },
+        {
+            "text": "actually show us here how to connect to",
+            "start_time": 681.67,
+            "duration": 4.169
+        },
+        {
+            "text": "a service by importing this build",
+            "start_time": 683.23,
+            "duration": 5.789
+        },
+        {
+            "text": "function and then passing in all of that",
+            "start_time": 685.839,
+            "duration": 5.011
+        },
+        {
+            "text": "information that we just saw within the",
+            "start_time": 689.019,
+            "duration": 4.021
+        },
+        {
+            "text": "documentation and we'll need to pass in",
+            "start_time": 690.85,
+            "duration": 4.5
+        },
+        {
+            "text": "our API key into that function as well",
+            "start_time": 693.04,
+            "duration": 5.039
+        },
+        {
+            "text": "so I'm gonna copy this import statement",
+            "start_time": 695.35,
+            "duration": 5.82
+        },
+        {
+            "text": "here and paste this into our script so",
+            "start_time": 698.079,
+            "duration": 4.891
+        },
+        {
+            "text": "I'm gonna copy that go back to the",
+            "start_time": 701.17,
+            "duration": 4.909
+        },
+        {
+            "text": "script and let's import this at the top",
+            "start_time": 702.97,
+            "duration": 5.88
+        },
+        {
+            "text": "okay and now from reading that",
+            "start_time": 706.079,
+            "duration": 5.26
+        },
+        {
+            "text": "documentation we know that we can",
+            "start_time": 708.85,
+            "duration": 4.77
+        },
+        {
+            "text": "connect to the YouTube service by using",
+            "start_time": 711.339,
+            "duration": 4.5
+        },
+        {
+            "text": "this build function so I'm gonna call",
+            "start_time": 713.62,
+            "duration": 5.219
+        },
+        {
+            "text": "this service YouTube and then I will",
+            "start_time": 715.839,
+            "duration": 7.261
+        },
+        {
+            "text": "pass in the build function and that was",
+            "start_time": 718.839,
+            "duration": 6.631
+        },
+        {
+            "text": "the first we need to pass in the service",
+            "start_time": 723.1,
+            "duration": 4.679
+        },
+        {
+            "text": "name which was YouTube all lowercase and",
+            "start_time": 725.47,
+            "duration": 7.559
+        },
+        {
+            "text": "then the version was v3 and then it also",
+            "start_time": 727.779,
+            "duration": 9.3
+        },
+        {
+            "text": "took in developer key as an argument as",
+            "start_time": 733.029,
+            "duration": 7.381
+        },
+        {
+            "text": "well and that is our API key and again",
+            "start_time": 737.079,
+            "duration": 5.01
+        },
+        {
+            "text": "if you're ever working with an API and",
+            "start_time": 740.41,
+            "duration": 3.989
+        },
+        {
+            "text": "forget any of this information then you",
+            "start_time": 742.089,
+            "duration": 3.93
+        },
+        {
+            "text": "can always go back to the documentation",
+            "start_time": 744.399,
+            "duration": 4.081
+        },
+        {
+            "text": "just to be sure okay so we have our",
+            "start_time": 746.019,
+            "duration": 4.62
+        },
+        {
+            "text": "YouTube service here and if we typed",
+            "start_time": 748.48,
+            "duration": 3.99
+        },
+        {
+            "text": "everything in correctly then this should",
+            "start_time": 750.639,
+            "duration": 4.62
+        },
+        {
+            "text": "be ready to use so real quick let's test",
+            "start_time": 752.47,
+            "duration": 6.059
+        },
+        {
+            "text": "this by making a very simple API request",
+            "start_time": 755.259,
+            "duration": 6.18
+        },
+        {
+            "text": "so I'm just going to fetch my channel",
+            "start_time": 758.529,
+            "duration": 5.071
+        },
+        {
+            "text": "information from YouTube and see if I",
+            "start_time": 761.439,
+            "duration": 4.471
+        },
+        {
+            "text": "get a response now in order to know how",
+            "start_time": 763.6,
+            "duration": 4.589
+        },
+        {
+            "text": "to do this we can go back to the",
+            "start_time": 765.91,
+            "duration": 4.32
+        },
+        {
+            "text": "documentation and look at the instance",
+            "start_time": 768.189,
+            "duration": 4.08
+        },
+        {
+            "text": "methods available to us with this",
+            "start_time": 770.23,
+            "duration": 4.89
+        },
+        {
+            "text": "YouTube service so I'm going to go back",
+            "start_time": 772.269,
+            "duration": 6.06
+        },
+        {
+            "text": "to the documentation here and open back",
+            "start_time": 775.12,
+            "duration": 6.449
+        },
+        {
+            "text": "up where we had where we clicked on this",
+            "start_time": 778.329,
+            "duration": 5.73
+        },
+        {
+            "text": "YouTube version 3 and it gave us all of",
+            "start_time": 781.569,
+            "duration": 4.5
+        },
+        {
+            "text": "our instance methods here that are",
+            "start_time": 784.059,
+            "duration": 4.08
+        },
+        {
+            "text": "available to us and we can see here",
+            "start_time": 786.069,
+            "duration": 3.661
+        },
+        {
+            "text": "towards the top of these instance",
+            "start_time": 788.139,
+            "duration": 4.32
+        },
+        {
+            "text": "methods that we have one called channels",
+            "start_time": 789.73,
+            "duration": 5.039
+        },
+        {
+            "text": "so we have this channels method and that",
+            "start_time": 792.459,
+            "duration": 5.73
+        },
+        {
+            "text": "returns a resource for that API route so",
+            "start_time": 794.769,
+            "duration": 7.0
+        },
+        {
+            "text": "if I open this in a new tab then",
+            "start_time": 798.189,
+            "duration": 6.13
+        },
+        {
+            "text": "can see that we that the resource that",
+            "start_time": 801.769,
+            "duration": 5.07
+        },
+        {
+            "text": "we have a few more methods here now the",
+            "start_time": 804.319,
+            "duration": 3.96
+        },
+        {
+            "text": "one that I'm going to be interested in",
+            "start_time": 806.839,
+            "duration": 4.141
+        },
+        {
+            "text": "is this list method so that we can list",
+            "start_time": 808.279,
+            "duration": 5.071
+        },
+        {
+            "text": "specific channels and we can see the",
+            "start_time": 810.98,
+            "duration": 5.07
+        },
+        {
+            "text": "arguments that this list method takes so",
+            "start_time": 813.35,
+            "duration": 5.429
+        },
+        {
+            "text": "we need to pass in this part argument",
+            "start_time": 816.05,
+            "duration": 4.949
+        },
+        {
+            "text": "here which is basically the information",
+            "start_time": 818.779,
+            "duration": 4.25
+        },
+        {
+            "text": "that we want included in the response",
+            "start_time": 820.999,
+            "duration": 5.19
+        },
+        {
+            "text": "now look I know that we're probably sick",
+            "start_time": 823.029,
+            "duration": 4.99
+        },
+        {
+            "text": "of looking at documentation instead of",
+            "start_time": 826.189,
+            "duration": 4.26
+        },
+        {
+            "text": "actually writing some code here but I'm",
+            "start_time": 828.019,
+            "duration": 4.35
+        },
+        {
+            "text": "trying to give a realistic example of",
+            "start_time": 830.449,
+            "duration": 3.901
+        },
+        {
+            "text": "what it's like to actually learn how to",
+            "start_time": 832.369,
+            "duration": 4.65
+        },
+        {
+            "text": "work with these api's there's a lot of",
+            "start_time": 834.35,
+            "duration": 5.549
+        },
+        {
+            "text": "different information to track down so",
+            "start_time": 837.019,
+            "duration": 4.831
+        },
+        {
+            "text": "the last bit of information that we need",
+            "start_time": 839.899,
+            "duration": 5.04
+        },
+        {
+            "text": "right now is what we can actually pass",
+            "start_time": 841.85,
+            "duration": 5.579
+        },
+        {
+            "text": "in as an argument for this part",
+            "start_time": 844.939,
+            "duration": 4.981
+        },
+        {
+            "text": "parameter here and then we'll be able to",
+            "start_time": 847.429,
+            "duration": 5.28
+        },
+        {
+            "text": "make our first API request so to find",
+            "start_time": 849.92,
+            "duration": 4.829
+        },
+        {
+            "text": "this information I'm just going to open",
+            "start_time": 852.709,
+            "duration": 6.06
+        },
+        {
+            "text": "up the official API documentation so",
+            "start_time": 854.749,
+            "duration": 7.231
+        },
+        {
+            "text": "right now we're on the Google API for",
+            "start_time": 858.769,
+            "duration": 6.54
+        },
+        {
+            "text": "Python github documentation but I'm",
+            "start_time": 861.98,
+            "duration": 5.909
+        },
+        {
+            "text": "going to open up the official YouTube",
+            "start_time": 865.309,
+            "duration": 4.47
+        },
+        {
+            "text": "documentation now and I already have",
+            "start_time": 867.889,
+            "duration": 4.32
+        },
+        {
+            "text": "this open in the browser but if you",
+            "start_time": 869.779,
+            "duration": 4.711
+        },
+        {
+            "text": "google YouTube API then this will be the",
+            "start_time": 872.209,
+            "duration": 4.35
+        },
+        {
+            "text": "first result okay so to find more",
+            "start_time": 874.49,
+            "duration": 4.559
+        },
+        {
+            "text": "information about what we can pass in to",
+            "start_time": 876.559,
+            "duration": 5.551
+        },
+        {
+            "text": "that channels resource and what we can",
+            "start_time": 879.049,
+            "duration": 5.061
+        },
+        {
+            "text": "get back we're going to need to click on",
+            "start_time": 882.11,
+            "duration": 5.55
+        },
+        {
+            "text": "references up here and then we want to",
+            "start_time": 884.11,
+            "duration": 6.06
+        },
+        {
+            "text": "go down to this channels reference and",
+            "start_time": 887.66,
+            "duration": 5.549
+        },
+        {
+            "text": "remember I was wanting to list channels",
+            "start_time": 890.17,
+            "duration": 4.719
+        },
+        {
+            "text": "so we could either go to an overview to",
+            "start_time": 893.209,
+            "duration": 4.531
+        },
+        {
+            "text": "see an overview of this API route or I",
+            "start_time": 894.889,
+            "duration": 5.64
+        },
+        {
+            "text": "could go to list which is specifically",
+            "start_time": 897.74,
+            "duration": 5.25
+        },
+        {
+            "text": "the route that I'm looking for and then",
+            "start_time": 900.529,
+            "duration": 4.381
+        },
+        {
+            "text": "we can see that it gives us common use",
+            "start_time": 902.99,
+            "duration": 5.219
+        },
+        {
+            "text": "cases we can even take a look at some",
+            "start_time": 904.91,
+            "duration": 5.039
+        },
+        {
+            "text": "code here and they have some Python code",
+            "start_time": 908.209,
+            "duration": 4.11
+        },
+        {
+            "text": "examples here so they did a really good",
+            "start_time": 909.949,
+            "duration": 5.7
+        },
+        {
+            "text": "job of documenting all this now what I",
+            "start_time": 912.319,
+            "duration": 5.61
+        },
+        {
+            "text": "need is I need to scroll down to",
+            "start_time": 915.649,
+            "duration": 5.1
+        },
+        {
+            "text": "parameters to see what exactly we can",
+            "start_time": 917.929,
+            "duration": 6.6
+        },
+        {
+            "text": "pass in to this part which is a required",
+            "start_time": 920.749,
+            "duration": 6.18
+        },
+        {
+            "text": "parameter so right here we can see all",
+            "start_time": 924.529,
+            "duration": 4.23
+        },
+        {
+            "text": "the strings that we can pass in to this",
+            "start_time": 926.929,
+            "duration": 5.041
+        },
+        {
+            "text": "part parameter so let's say that I want",
+            "start_time": 928.759,
+            "duration": 6.481
+        },
+        {
+            "text": "the statistics of a certain Channel",
+            "start_time": 931.97,
+            "duration": 5.429
+        },
+        {
+            "text": "then I can just pass in statistics here",
+            "start_time": 935.24,
+            "duration": 5.73
+        },
+        {
+            "text": "as an argument so let me go back to our",
+            "start_time": 937.399,
+            "duration": 5.971
+        },
+        {
+            "text": "script and I'll try this out so I'm",
+            "start_time": 940.97,
+            "duration": 4.29
+        },
+        {
+            "text": "going to go back to our script here and",
+            "start_time": 943.37,
+            "duration": 5.159
+        },
+        {
+            "text": "now in order to do this I can create a",
+            "start_time": 945.26,
+            "duration": 6.0
+        },
+        {
+            "text": "request and then I'm going to use this",
+            "start_time": 948.529,
+            "duration": 5.731
+        },
+        {
+            "text": "YouTube service here and remember we saw",
+            "start_time": 951.26,
+            "duration": 6.24
+        },
+        {
+            "text": "those YouTube that YouTube resource",
+            "start_time": 954.26,
+            "duration": 5.16
+        },
+        {
+            "text": "earlier and all those instance methods",
+            "start_time": 957.5,
+            "duration": 3.81
+        },
+        {
+            "text": "that we had available and one of those",
+            "start_time": 959.42,
+            "duration": 4.68
+        },
+        {
+            "text": "was the channels instance method and",
+            "start_time": 961.31,
+            "duration": 5.85
+        },
+        {
+            "text": "within there we want to list the",
+            "start_time": 964.1,
+            "duration": 6.45
+        },
+        {
+            "text": "channels and now we need to pass in a",
+            "start_time": 967.16,
+            "duration": 6.6
+        },
+        {
+            "text": "couple of required parameters so first",
+            "start_time": 970.55,
+            "duration": 5.97
+        },
+        {
+            "text": "we need to pass in that part and I said",
+            "start_time": 973.76,
+            "duration": 4.13
+        },
+        {
+            "text": "that I was going to look up the",
+            "start_time": 976.52,
+            "duration": 6.96
+        },
+        {
+            "text": "statistics for a channel and finally how",
+            "start_time": 977.89,
+            "duration": 8.319
+        },
+        {
+            "text": "do we find our what channel we're",
+            "start_time": 983.48,
+            "duration": 6.06
+        },
+        {
+            "text": "actually getting statistics for so if I",
+            "start_time": 986.209,
+            "duration": 5.761
+        },
+        {
+            "text": "go back to the documentation one more",
+            "start_time": 989.54,
+            "duration": 7.95
+        },
+        {
+            "text": "time and look at our list method that",
+            "start_time": 991.97,
+            "duration": 7.83
+        },
+        {
+            "text": "we're using up here at the top we can",
+            "start_time": 997.49,
+            "duration": 7.08
+        },
+        {
+            "text": "see one here that is a four username so",
+            "start_time": 999.8,
+            "duration": 6.599
+        },
+        {
+            "text": "we could either pass in like a channel",
+            "start_time": 1004.57,
+            "duration": 4.44
+        },
+        {
+            "text": "ID or we could pass in a channel",
+            "start_time": 1006.399,
+            "duration": 4.831
+        },
+        {
+            "text": "username using the for username",
+            "start_time": 1009.01,
+            "duration": 4.44
+        },
+        {
+            "text": "parameter so that's what I'm going to",
+            "start_time": 1011.23,
+            "duration": 4.82
+        },
+        {
+            "text": "use so I'm going to just say for",
+            "start_time": 1013.45,
+            "duration": 6.12
+        },
+        {
+            "text": "username and that was a capitalized do I",
+            "start_time": 1016.05,
+            "duration": 7.769
+        },
+        {
+            "text": "believe in that documentation and now my",
+            "start_time": 1019.57,
+            "duration": 7.739
+        },
+        {
+            "text": "channel username is actually Schaefer",
+            "start_time": 1023.819,
+            "duration": 6.311
+        },
+        {
+            "text": "five okay so that should create a",
+            "start_time": 1027.309,
+            "duration": 7.26
+        },
+        {
+            "text": "request to the YouTube API but now in",
+            "start_time": 1030.13,
+            "duration": 7.26
+        },
+        {
+            "text": "order to get a response we're going to",
+            "start_time": 1034.569,
+            "duration": 6.571
+        },
+        {
+            "text": "have to execute that request so I'll say",
+            "start_time": 1037.39,
+            "duration": 7.439
+        },
+        {
+            "text": "request dot execute and now let's just",
+            "start_time": 1041.14,
+            "duration": 7.65
+        },
+        {
+            "text": "print out our response here so if I save",
+            "start_time": 1044.829,
+            "duration": 7.561
+        },
+        {
+            "text": "this and run it then we see that we did",
+            "start_time": 1048.79,
+            "duration": 6.269
+        },
+        {
+            "text": "get a response here so if I look at this",
+            "start_time": 1052.39,
+            "duration": 5.539
+        },
+        {
+            "text": "response then we can see that I get my",
+            "start_time": 1055.059,
+            "duration": 6.601
+        },
+        {
+            "text": "that we had one total result and that it",
+            "start_time": 1057.929,
+            "duration": 7.511
+        },
+        {
+            "text": "is a of kind of a YouTube channel gives",
+            "start_time": 1061.66,
+            "duration": 6.71
+        },
+        {
+            "text": "me my channel ID and things like that",
+            "start_time": 1065.44,
+            "duration": 4.73
+        },
+        {
+            "text": "I look down here at my video count it",
+            "start_time": 1068.37,
+            "duration": 5.189
+        },
+        {
+            "text": "says 226 so that sounds about right for",
+            "start_time": 1070.17,
+            "duration": 6.0
+        },
+        {
+            "text": "my channel so it does seem like our API",
+            "start_time": 1073.559,
+            "duration": 5.731
+        },
+        {
+            "text": "connection is working so if we wanted to",
+            "start_time": 1076.17,
+            "duration": 4.59
+        },
+        {
+            "text": "see stats for another YouTube channel",
+            "start_time": 1079.29,
+            "duration": 4.59
+        },
+        {
+            "text": "then all we need to do is pass in their",
+            "start_time": 1080.76,
+            "duration": 7.02
+        },
+        {
+            "text": "username here into this function now a",
+            "start_time": 1083.88,
+            "duration": 6.3
+        },
+        {
+            "text": "username might be different than their",
+            "start_time": 1087.78,
+            "duration": 4.529
+        },
+        {
+            "text": "display name on YouTube so for example",
+            "start_time": 1090.18,
+            "duration": 4.5
+        },
+        {
+            "text": "my display name is Cory Schafer but my",
+            "start_time": 1092.309,
+            "duration": 5.101
+        },
+        {
+            "text": "username is Schaefer 5 to find the",
+            "start_time": 1094.68,
+            "duration": 4.35
+        },
+        {
+            "text": "username you'd actually have to go to",
+            "start_time": 1097.41,
+            "duration": 4.29
+        },
+        {
+            "text": "their YouTube page and then look in the",
+            "start_time": 1099.03,
+            "duration": 5.34
+        },
+        {
+            "text": "URL so for example let's say that I",
+            "start_time": 1101.7,
+            "duration": 5.58
+        },
+        {
+            "text": "wanted to look up let's do some Texas",
+            "start_time": 1104.37,
+            "duration": 6.33
+        },
+        {
+            "text": "channel so if I I think his username is",
+            "start_time": 1107.28,
+            "duration": 6.029
+        },
+        {
+            "text": "probably syntax but let's go ahead and",
+            "start_time": 1110.7,
+            "duration": 4.74
+        },
+        {
+            "text": "see if that is correct I'll save this",
+            "start_time": 1113.309,
+            "duration": 7.381
+        },
+        {
+            "text": "and run it and we can see that yeah this",
+            "start_time": 1115.44,
+            "duration": 7.05
+        },
+        {
+            "text": "is probably him because he has eight",
+            "start_time": 1120.69,
+            "duration": 3.72
+        },
+        {
+            "text": "hundred and ninety thousand subscribers",
+            "start_time": 1122.49,
+            "duration": 3.689
+        },
+        {
+            "text": "and he's definitely blowing me out of",
+            "start_time": 1124.41,
+            "duration": 3.6
+        },
+        {
+            "text": "the water with the video count there he",
+            "start_time": 1126.179,
+            "duration": 4.801
+        },
+        {
+            "text": "has over 1200 video so that's very",
+            "start_time": 1128.01,
+            "duration": 5.07
+        },
+        {
+            "text": "impressive ok so now that we know that",
+            "start_time": 1130.98,
+            "duration": 4.47
+        },
+        {
+            "text": "we have this API working here within",
+            "start_time": 1133.08,
+            "duration": 5.07
+        },
+        {
+            "text": "Python now we can use this API to grab",
+            "start_time": 1135.45,
+            "duration": 4.5
+        },
+        {
+            "text": "just about any public information that",
+            "start_time": 1138.15,
+            "duration": 3.779
+        },
+        {
+            "text": "we'd want and that's what we're going to",
+            "start_time": 1139.95,
+            "duration": 4.77
+        },
+        {
+            "text": "be doing in the next few videos so I'll",
+            "start_time": 1141.929,
+            "duration": 4.951
+        },
+        {
+            "text": "show how we can use this API to do some",
+            "start_time": 1144.72,
+            "duration": 3.93
+        },
+        {
+            "text": "really useful things that aren't",
+            "start_time": 1146.88,
+            "duration": 4.049
+        },
+        {
+            "text": "directly available from within YouTube",
+            "start_time": 1148.65,
+            "duration": 4.83
+        },
+        {
+            "text": "itself so for example in the next video",
+            "start_time": 1150.929,
+            "duration": 4.651
+        },
+        {
+            "text": "we're gonna learn how to write a script",
+            "start_time": 1153.48,
+            "duration": 4.53
+        },
+        {
+            "text": "that calculates the duration of videos",
+            "start_time": 1155.58,
+            "duration": 5.28
+        },
+        {
+            "text": "in a specific playlist and I think this",
+            "start_time": 1158.01,
+            "duration": 4.919
+        },
+        {
+            "text": "is extremely important information to",
+            "start_time": 1160.86,
+            "duration": 4.41
+        },
+        {
+            "text": "know and I'm honestly surprised that",
+            "start_time": 1162.929,
+            "duration": 4.471
+        },
+        {
+            "text": "Google hasn't added this information to",
+            "start_time": 1165.27,
+            "duration": 4.289
+        },
+        {
+            "text": "the actual playlist data on the actual",
+            "start_time": 1167.4,
+            "duration": 4.74
+        },
+        {
+            "text": "website so for example if you wanted to",
+            "start_time": 1169.559,
+            "duration": 4.591
+        },
+        {
+            "text": "watch one of my playlists then you'd",
+            "start_time": 1172.14,
+            "duration": 3.75
+        },
+        {
+            "text": "likely want to know how long that",
+            "start_time": 1174.15,
+            "duration": 3.69
+        },
+        {
+            "text": "playlist is so that you can get an idea",
+            "start_time": 1175.89,
+            "duration": 3.87
+        },
+        {
+            "text": "of how long it would take you to learn",
+            "start_time": 1177.84,
+            "duration": 4.589
+        },
+        {
+            "text": "that certain topic but currently YouTube",
+            "start_time": 1179.76,
+            "duration": 4.2
+        },
+        {
+            "text": "doesn't have that information directly",
+            "start_time": 1182.429,
+            "duration": 4.291
+        },
+        {
+            "text": "on their site so I use scripts like this",
+            "start_time": 1183.96,
+            "duration": 4.29
+        },
+        {
+            "text": "all the time when I'm trying to",
+            "start_time": 1186.72,
+            "duration": 3.839
+        },
+        {
+            "text": "calculate information like this to make",
+            "start_time": 1188.25,
+            "duration": 4.05
+        },
+        {
+            "text": "my life a little bit easier so",
+            "start_time": 1190.559,
+            "duration": 3.301
+        },
+        {
+            "text": "definitely be sure to check out that",
+            "start_time": 1192.3,
+            "duration": 4.26
+        },
+        {
+            "text": "next video when it's released if that",
+            "start_time": 1193.86,
+            "duration": 3.87
+        },
+        {
+            "text": "sounds like something you'd be",
+            "start_time": 1196.56,
+            "duration": 3.27
+        },
+        {
+            "text": "interested in ok so I think that is",
+            "start_time": 1197.73,
+            "duration": 3.84
+        },
+        {
+            "text": "going to do it for this video hopefully",
+            "start_time": 1199.83,
+            "duration": 2.38
+        },
+        {
+            "text": "now you",
+            "start_time": 1201.57,
+            "duration": 2.56
+        },
+        {
+            "text": "have a pretty good idea for how you can",
+            "start_time": 1202.21,
+            "duration": 4.08
+        },
+        {
+            "text": "get started with the YouTube API and",
+            "start_time": 1204.13,
+            "duration": 4.38
+        },
+        {
+            "text": "accessing this information within Python",
+            "start_time": 1206.29,
+            "duration": 4.26
+        },
+        {
+            "text": "but if anyone has any questions about",
+            "start_time": 1208.51,
+            "duration": 3.72
+        },
+        {
+            "text": "what we covered in this video then feel",
+            "start_time": 1210.55,
+            "duration": 3.0
+        },
+        {
+            "text": "free to ask in the comment section below",
+            "start_time": 1212.23,
+            "duration": 3.06
+        },
+        {
+            "text": "and I'll do my best to answer those and",
+            "start_time": 1213.55,
+            "duration": 3.57
+        },
+        {
+            "text": "if you enjoy these tutorials and would",
+            "start_time": 1215.29,
+            "duration": 3.24
+        },
+        {
+            "text": "like to support them then there are",
+            "start_time": 1217.12,
+            "duration": 3.15
+        },
+        {
+            "text": "several ways you can do that these these",
+            "start_time": 1218.53,
+            "duration": 3.54
+        },
+        {
+            "text": "ways to simply LIKE the video and give",
+            "start_time": 1220.27,
+            "duration": 3.6
+        },
+        {
+            "text": "it a thumbs up and also it's a huge help",
+            "start_time": 1222.07,
+            "duration": 3.42
+        },
+        {
+            "text": "to share these videos with anyone who",
+            "start_time": 1223.87,
+            "duration": 3.24
+        },
+        {
+            "text": "you think would find them useful and if",
+            "start_time": 1225.49,
+            "duration": 2.97
+        },
+        {
+            "text": "you have the means you can contribute",
+            "start_time": 1227.11,
+            "duration": 3.54
+        },
+        {
+            "text": "through patreon or YouTube and there are",
+            "start_time": 1228.46,
+            "duration": 3.9
+        },
+        {
+            "text": "links to those pages and the description",
+            "start_time": 1230.65,
+            "duration": 3.72
+        },
+        {
+            "text": "section below be sure to subscribe for",
+            "start_time": 1232.36,
+            "duration": 3.57
+        },
+        {
+            "text": "future videos and thank you all for",
+            "start_time": 1234.37,
+            "duration": 4.01
+        },
+        {
+            "text": "watching",
+            "start_time": 1235.93,
+            "duration": 2.45
+        },
+        {
+            "text": "you",
+            "start_time": 1247.33,
+            "duration": 2.06
+        }
+    ]
+}
