@@ -20,10 +20,11 @@ Welcome to the source code repository for **LAAMA**, a cloud-based platform for 
 
 ## **How to Start the Application**
 
-The easiest way to access the application is via this link: 
+The easiest way to access the application is via this link: http://35.183.216.237/
+
 If this doesn't work, please go through the steps below to start the application.
 
-Note: Please only use the application in light mode as the UI components do not render properly in dark model yet.
+**Note:** Please only use the application in light mode as the UI components do not render properly in dark model yet.
 
 1. **Connect to the EC2 Instance**  
    - Log in to the AWS Management Console.
