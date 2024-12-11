@@ -38,4 +38,7 @@ Welcome to the source code repository for **LAAMA**, a cloud-based platform for 
 4. **Access the Application**
    Open your web browser and navigate to the public IP of the EC2 instance on port 80 or 443 (our secure port): `http://<EC2-Public-IP>:8501`
 
+---
+
+## **Troubleshooting**
 If you encounter any issues or have questions, please reach out to us, we will more than happy to help you setup the application in case of unexpected failures.
